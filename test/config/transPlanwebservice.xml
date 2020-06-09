@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.ouyeel56.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="TPLTransPlanWS" targetNamespace="http://www.ouyeel56.com/">  
+  <wsdl:types> 
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://www.ouyeel56.com/" version="1.0">  
+      <xs:element name="receiveTransPlanInfo" type="tns:receiveTransPlanInfo"/>  
+      <xs:element name="receiveTransPlanInfoResponse" type="tns:receiveTransPlanInfoResponse"/>  
+      <xs:complexType name="receiveTransPlanInfo"> 
+        <xs:sequence> 
+          <xs:element minOccurs="0" name="transPlanList" type="xs:string"/> 
+        </xs:sequence> 
+      </xs:complexType>  
+      <xs:complexType name="receiveTransPlanInfoResponse"> 
+        <xs:sequence> 
+          <xs:element minOccurs="0" name="TPLTransPlanResp" type="xs:string"/> 
+        </xs:sequence> 
+      </xs:complexType> 
+    </xs:schema> 
+  </wsdl:types>  
+  
+  <wsdl:message name="receiveTransPlanInfoResponse"> 
+    <wsdl:part element="tns:receiveTransPlanInfoResponse" name="parameters"></wsdl:part> 
+  </wsdl:message>  
+  
+  <wsdl:message name="receiveTransPlanInfo"> 
+    <wsdl:part element="tns:receiveTransPlanInfo" name="parameters"></wsdl:part> 
+  </wsdl:message>  
+  
+  <wsdl:portType name="TPLTransPlanWS"> 
+    <wsdl:operation name="receiveTransPlanInfo"> 
+      <wsdl:input message="tns:receiveTransPlanInfo" name="receiveTransPlanInfo"></wsdl:input>  
+      <wsdl:output message="tns:receiveTransPlanInfoResponse" name="receiveTransPlanInfoResponse"></wsdl:output> 
+    </wsdl:operation> 
+  </wsdl:portType>  
+  
+  <wsdl:binding name="TPLTransPlanWSSoapBinding" type="tns:TPLTransPlanWS"> 
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>  
+    <wsdl:operation name="receiveTransPlanInfo"> 
+      <soap:operation soapAction="" style="document"/>  
+      <wsdl:input name="receiveTransPlanInfo"> 
+        <soap:body use="literal"/> 
+      </wsdl:input>  
+      <wsdl:output name="receiveTransPlanInfoResponse"> 
+        <soap:body use="literal"/> 
+      </wsdl:output> 
+    </wsdl:operation> 
+  </wsdl:binding>  
+  
+  <wsdl:service name="TPLTransPlanWS"> 
+    <wsdl:port binding="tns:TPLTransPlanWSSoapBinding" name="TPLTransPlanWSImplPort"> 
+      <soap:address location="http://10.60.146.52:8080/ouyeel-openapi/services/tpl-transPlanWS"/> 
+    </wsdl:port> 
+  </wsdl:service> 
+</wsdl:definitions>

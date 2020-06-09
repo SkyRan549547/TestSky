@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans>
+	<bean name="TplMessageTransArrivalItem" circular="20" total="142">
+		<prop name="billId" type="string" length="20" />
+		<prop name="packId" type="string" length="50" />
+		<prop name="grossWeight" type="float" length="18" decimal="6" />
+		<prop name="netWeight" type="float" length="18" decimal="6" />
+		<prop name="count" type="int" length="12" />
+		<prop name="billPackType" type="string" length="2" />
+		<prop name="orderNum" type="string" length="20" />
+		<prop name="companyCode" type="string" length="2" />
+	</bean>
+	<bean name="TplMsgContractItem" circular="150" total="25">
+		<prop name="packId" type="string" length="15" />
+		<prop name="weightActive" type="float" length="10" decimal="3" />
+	</bean>
+	<bean name="TplMessageTransLoadingItem" circular="20" total="142">
+		<prop name="billId" type="string" length="20" />
+		<prop name="packId" type="string" length="50" />
+		<prop name="grossWeight" type="float" length="18" decimal="6" />
+		<prop name="netWeight" type="float" length="18" decimal="6" />
+		<prop name="count" type="int" length="12" />
+		<prop name="billPackType" type="string" length="2" />
+		<prop name="orderNum" type="string" length="20" />
+		<prop name="companyCode" type="string" length="2" />
+	</bean>
+
+	<!-- 信息修改申请明细-->
+	<bean name="TplRModifyApplyItem" circular="4" total="840">
+		<prop name="keyOneId" type="string" length="50" />
+		<prop name="keyOneName" type="string" length="50" />
+		<prop name="keyOneValue" type="string" length="50" />
+		<prop name="keyTwoId" type="string" length="50" />
+		<prop name="keyTwoName" type="string" length="50" />
+		<prop name="keyTwoValue" type="string" length="50" />
+		<prop name="modifyFieldId" type="string" length="20" />
+		<prop name="modifyFieldName" type="string" length="20" />
+		<prop name="oldValue" type="string" length="250" />
+		<prop name="newValue" type="string" length="250" />
+	</bean>
+
+	<!-- 运输计划明细 -->
+	<bean name="TplMessageTransPack" circular="9" total="314">
+		<prop name="transPlanId" type="string" length="20" />
+		<prop name="productType" type="string" length="10" />
+		<prop name="productName" type="string" length="30" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="orderNum" type="string" length="20" />
+		<prop name="productId" type="string" length="20" />
+		<prop name="salePrice" type="float" length="10" decimal="2" /><!-- 保险基价 -->
+		<prop name="packId" type="string" length="20" />
+		<prop name="packType" type="string" length="1" />
+		<prop name="netWeight" type="float" length="18" decimal="6" />
+		<prop name="grossWeight" type="float" length="18" decimal="6" />
+		<prop name="unitCount" type="int" length="8" />
+		<prop name="unitWeight" type="float" length="18" decimal="6" />
+		<prop name="specDesc" type="string" length="60" />
+		<prop name="shopsignName" type="string" length="20" />
+		<prop name="packOrderType" type="string" length="3" />
+		<prop name="wrapMode" type="string" length="4" />
+		<prop name="insuranceRate" type="float" length="10" decimal="6" /><!-- 保险费率 -->
+		<prop name="insurancePrice" type="float" length="10"
+			decimal="2" /><!-- 保费单价 -->
+		<prop name="readyNum" type="string" length="10" /><!-- 准发号 -->
+		<prop name="orderBusinessType" type="string" length="2" /><!-- 合同业务类型 -->
+		
+	</bean>
+
+	<!-- 运输作业实绩明细 -->
+	<bean name="TplMessageTransRealItem" circular="20" total="83">
+		<prop name="packId" type="string" length="20" />
+		<prop name="packType" type="string" length="1" />
+		<prop name="unitCount" type="int" length="8" />
+		<prop name="unitWeight" type="float" length="18" decimal="6" />
+		<prop name="netWeight" type="float" length="18" decimal="6" />
+		<prop name="grossWeight" type="float" length="18" decimal="6" />
+	</bean>
+
+	<!--  车船清单明细 -->
+	<bean name="TplMessageTransOnItem" circular="80" total="42">
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="orderNum" type="string" length="20" />
+		<prop name="packId" type="string" length="20" />
+	</bean>
+
+	<!-- 入库实绩明细 -->
+	<bean name="TplMessageStockinRealItem" circular="20" total="95">
+		<prop name="packId" type="string" length="20" />
+		<prop name="packType" type="string" length="1" />
+		<prop name="unitCount" type="int" length="8" />
+		<prop name="unitWeight" type="float" length="18" decimal="6" />
+		<prop name="netWeight" type="float" length="18" decimal="6" />
+		<prop name="grossWeight" type="float" length="18" decimal="6" />
+		<prop name="location" type="string" length="12" />
+	</bean>
+
+	<!-- 出库实绩明细 -->
+	<bean name="TplMessageStockoutRealItem" circular="20" total="123">
+		<prop name="packId" type="string" length="20" />
+		<prop name="packType" type="string" length="1" />
+		<prop name="unitCount" type="int" length="8" />
+		<prop name="unitWeight" type="float" length="18" decimal="6" />
+		<prop name="netWeight" type="float" length="18" decimal="6" />
+		<prop name="grossWeight" type="float" length="18" decimal="6" />
+		<prop name="carId" type="string" length="20" />
+		<prop name="driver" type="string" length="20" />
+	</bean>
+
+	<!-- 调整明细 -->
+	<bean name="TplMessageStockAdjustItem" circular="20" total="124">
+		<prop name="adjustNo" type="string" length="12" />
+		<prop name="orderNum" type="string" length="20" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="packId" type="string" length="20" />
+		<prop name="grossWeight" type="float" length="18" decimal="6" />
+		<prop name="changeGrossWeight" type="float" length="18"
+			decimal="6" />
+		<prop name="unitCount" type="int" length="5" />
+		<prop name="changeUnitCount" type="int" length="5" />
+		<prop name="location" type="string" length="12" />
+		<prop name="destLocation" type="string" length="12" />
+	</bean>
+
+	<!-- 盘点明细 -->
+	<bean name="TplMessageStockCheckItem" circular="30" total="102">
+		<prop name="checkNo" type="string" length="12" />
+		<prop name="orderNum" type="string" length="20" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="packId" type="string" length="20" />
+		<prop name="location" type="string" length="12" />
+		<prop name="grossWeight" type="float" length="18" decimal="6" />
+		<prop name="changeGrossWeight" type="float" length="18"
+			decimal="6" />
+	</bean>
+
+	<!-- 入库计划明细 -->
+	<bean name="TplMessageStockInItem" circular="9" total="392">
+		<prop name="planPutinId" type="string" length="20" />
+		<prop name="readyNum" type="string" length="10" />
+		<prop name="readyDate" type="date" length="10"
+			format="yyMMddhhmm" />
+		<prop name="packId" type="string" length="20" />
+		<prop name="packType" type="string" length="1" />
+		<prop name="productId" type="string" length="20" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="orderNum" type="string" length="20" />
+		<prop name="netWeight" type="float" length="18" decimal="6" />
+		<prop name="grossWeight" type="float" length="18" decimal="6" />
+		<prop name="stoveNum" type="string" length="10" />
+		<prop name="specDesc" type="string" length="60" />
+		<prop name="shopsignName" type="string" length="20" />
+		<prop name="productType" type="string" length="10" />
+		<prop name="productName" type="string" length="30" />
+		<prop name="qualityGrade" type="string" length="4" />
+		<prop name="producingAreaName" type="string" length="30" />
+		<prop name="unitCount" type="int" length="8" />
+		<prop name="unitWeight" type="float" length="18" decimal="6" />
+		<prop name="packOrderType" type="string" length="3"  />
+		<prop name="deliveryPlaceName" type="string" length="60"  />
+		
+	</bean>
+	
+	<!-- 合同替换明细 total --> 
+	<bean name="TplMsgContractItem" circular="150" total="25">
+		<prop name="packId" type="string" length="15" />
+		<prop name="weightActive" type="float" length="10" decimal="3" />
+		
+	</bean>
+
+	<!-- 出库计划明细 -->
+	<bean name="TplMessageStockOutItem" circular="20" total="158">
+		<prop name="planPutoutId" type="string" length="20" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="orderNum" type="string" length="20" />
+		<prop name="productId" type="string" length="20" />
+		<prop name="packId" type="string" length="20" />
+		<prop name="packType" type="string" length="1" />
+		<prop name="netWeight" type="float" length="18" decimal="6" />
+		<prop name="grossWeight" type="float" length="18" decimal="6" />
+		<prop name="unitCount" type="int" length="8" />
+		<prop name="unitWeight" type="float" length="18" decimal="6" />
+		<!-- message add by panyouyong 20120611 -->
+		<prop name="readyNum" type="string" length="10" />
+		<!-- message add by panyouyong 20120611 -->
+		<prop name="packOrderType" type="string" length="3"  />
+	</bean>
+
+	<!-- 发票付款明细 -->
+	<bean name="TplMessageInvoiceFee" circular="20" total="183">
+		<prop name="invoiceSysId" type="string" length="16" />
+		<prop name="invoiceNo" type="string" length="8" />
+		<prop name="invoiceId" type="string" length="12" />
+		<prop name="planId" type="string" length="25" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="orderNum" type="string" length="20" />
+		<prop name="insurId" type="string" length="12" />
+		<prop name="feeTypeCode" type="string" length="4" />
+		<prop name="feeTypeName" type="string" length="20" />
+		<prop name="unitPrice" type="float" length="18" decimal="2" />
+		<prop name="grossWeight" type="float" length="18" decimal="6" />
+		<prop name="totalAmount" type="float" length="18" decimal="2" />
+		<prop name="taxAmount" type="float" length="10" decimal="2" />
+	</bean>
+
+	<!-- 出厂数据配置 -->
+	<!-- 提单 --><!--
+		<bean name="LgsTmpPickData" circular="1" total="204">
+		<prop name="manuId" type="string" length="4" />
+		<prop name="pickNum" type="string" length="13" />
+		<prop name="operationType" type="string" length="2" />
+		<prop name="deliveryPrgNum" type="string" length="9" />
+		<prop name="trnpModeCode" type="string" length="4" />
+		<prop name="storehouseCode" type="string" length="9" />
+		<prop name="weightDlvPrgTot" type="float" length="10" decimal="3" />
+		<prop name="NDlvPrgTot" type="int" length="5"/>
+		<prop name="datePrgEstablish" type="string" length="8" />
+		<prop name="TPrgEstablish" type="string" length="4" />
+		<prop name="datePrgRelease" type="string" length="8" />
+		<prop name="TPrgRelease" type="string" length="4" />
+		<prop name="datePrgExecute" type="string" length="8" />
+		<prop name="TPrgExecute" type="string" length="4" />
+		<prop name="carryCompanyCode" type="string" length="6" />
+		<prop name="carryCompanyName" type="string" length="50" />
+		<prop name="carryCompany11" type="string" length="6" />
+		<prop name="deliveryType" type="string" length="2" />
+		<prop name="shipLotNum" type="string" length="8" />
+		<prop name="shipName" type="string" length="20" />
+		<prop name="batchId" type="string" length="20" />
+		</bean>	
+		<bean name="LgsTmpPickMaterial" circular="1" total="50">
+		<prop name="manuId" type="string" length="4" />
+		<prop name="pickNum" type="string" length="13" />
+		<prop name="packNum" type="string" length="11" />
+		<prop name="netWeight" type="float" length="10" decimal="3" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="orderNum" type="string" length="10" />
+		</bean>	
+	-->
+	<!--材料对应发票　modifed by zhengfei -->
+	<bean name="LgsStackMaterialInvoice" circular="1" total="72">
+		<prop name="stackNum" type="string" length="20" />
+		<prop name="orderNum" type="string" length="10" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="packNum" type="string" length="20" />
+		<prop name="invoiceNum" type="string" length="20" />
+	</bean>
+
+
+
+
+	<!-- 码单数据 -->
+	<bean name="LgsTmpStackData" circular="1" total="489">
+		<prop name="manuId" type="string" length="4" />
+		<prop name="stackingRecNum" type="string" length="10" />
+		<prop name="pickNum" type="string" length="13" />
+		<prop name="orderNum" type="string" length="10" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="readyNum" type="string" length="10" />
+		<prop name="trnpModeCode" type="string" length="4" />
+		<prop name="carryCompanyCode" type="string" length="6" />
+		<prop name="carryCompanyName" type="string" length="50" />
+		<prop name="NStackingRec" type="int" length="5" />
+		<prop name="weightStrc" type="float" length="10" decimal="3" />
+		<prop name="productDscr" type="string" length="20" />
+		<prop name="shopsign" type="string" length="16" />
+		<prop name="domesticExport" type="string" length="1" />
+		<prop name="storehouseCode" type="string" length="9" />
+		<prop name="ladeCode" type="string" length="8" />
+		<prop name="dlvSpotCode" type="string" length="8" />
+		<prop name="privateRouteCode" type="string" length="2" />
+		<prop name="dlvSpotName" type="string" length="60" />
+		<prop name="consigneeNum" type="string" length="6" />
+		<prop name="consigneeName" type="string" length="60" />
+		<prop name="settleUserNum" type="string" length="6" />
+		<prop name="settleUserName" type="string" length="60" />
+		<prop name="qltDecideCode" type="string" length="1" />
+		<prop name="vehicleCode" type="string" length="20" />
+		<prop name="NGrassPack" type="int" length="5" />
+		<prop name="deliveryDateChr" type="string" length="8" />
+		<prop name="TDelivery" type="string" length="4" />
+		<prop name="dept" type="string" length="20" />
+		<prop name="userId" type="string" length="6" />
+		<prop name="operatorName" type="string" length="10" />
+		<prop name="productCodeFb1" type="string" length="1" />
+		<prop name="productCodeFb2" type="string" length="3" />
+		<prop name="productCodeFb3" type="string" length="1" />
+		<prop name="expenseStatus" type="string" length="1" />
+		<prop name="weightTheo" type="float" length="10" decimal="3" />
+		<prop name="weightType" type="string" length="1" />
+		<prop name="stackingType" type="string" length="2" />
+		<prop name="codeAllThrReady" type="string" length="13" />
+		<prop name="stinSthsCode" type="string" length="3" />
+	</bean>
+
+	<!-- 码单材料数据 -->
+	<bean name="LgsTmpStackMaterial" circular="1" total="76">
+		<prop name="manuId" type="string" length="4" />
+		<prop name="stackingRecNum" type="string" length="10" />
+		<prop name="pickNum" type="string" length="13" />
+		<prop name="packNum" type="string" length="11" />
+		<prop name="weightActive" type="float" length="10" decimal="3" />
+		<prop name="weightTheo" type="float" length="10" decimal="3" />
+		<prop name="NPack" type="int" length="5" />
+		<prop name="invoiceNum" type="string" length="13" />
+	</bean>
+
+	<!-- 码单红冲数据 -->
+	<bean name="LgsTmpStackRed" circular="1" total="82">
+		<prop name="manuId" type="string" length="4" />
+		<prop name="stackingNum" type="string" length="10" />
+		<prop name="pickNum" type="string" length="13" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="orderNum" type="string" length="10" />
+		<prop name="packId" type="string" length="11" />
+		<prop name="weight" type="float" length="10" decimal="3" />
+		<prop name="operator" type="string" length="10" />
+		<prop name="redDate" type="string" length="12" />
+	</bean>
+
+	<!-- 提单数据 -->
+	<bean name="LgsTmpPickData" circular="1" total="204">
+		<prop name="manuId" type="string" length="4" />
+		<prop name="pickNum" type="string" length="13" />
+		<prop name="operationType" type="string" length="2" />
+		<prop name="deliveryPrgNum" type="string" length="9" />
+		<prop name="trnpModeCode" type="string" length="4" />
+		<prop name="storehouseCode" type="string" length="9" />
+		<prop name="weightDlvPrgTot" type="float" length="10"
+			decimal="3" />
+		<prop name="NDlvPrgTot" type="string" length="5" />
+		<prop name="datePrgEstablish" type="string" length="8" />
+		<prop name="TPrgEstablish" type="string" length="4" />
+		<prop name="datePrgRelease" type="string" length="8" />
+		<prop name="TPrgRelease" type="string" length="4" />
+		<prop name="datePrgExecute" type="string" length="8" />
+		<prop name="TPrgExecute" type="string" length="4" />
+		<prop name="carryCompanyCode" type="string" length="6" />
+		<prop name="carryCompanyName" type="string" length="50" />
+		<prop name="carryCompany11" type="string" length="6" />
+		<prop name="deliveryType" type="string" length="2" />
+		<prop name="shipLotNum" type="string" length="8" />
+		<prop name="shipName" type="string" length="20" />
+		<prop name="batchId" type="string" length="20" />
+	</bean>
+
+	<!-- 提单材料数据 -->
+	<bean name="LgsTmpPickMaterial" circular="1" total="50">
+		<prop name="manuId" type="string" length="4" />
+		<prop name="pickNum" type="string" length="13" />
+		<prop name="packNum" type="string" length="11" />
+		<prop name="netWeight" type="float" length="10" decimal="3" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="orderNum" type="string" length="10" />
+	</bean>
+
+	<!-- 提单红冲数据 -->
+	<bean name="LgsTmpPickRed" circular="1" total="70">
+		<prop name="manuId" type="string" length="4" />
+		<prop name="pickNum" type="string" length="13" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="orderNum" type="string" length="10" />
+		<prop name="packId" type="string" length="11" />
+		<prop name="weight" type="float" length="10" decimal="3" />
+		<prop name="operator" type="string" length="10" />
+		<prop name="redDate" type="string" length="12" />
+	</bean>
+
+	<!-- 准发数据 -->
+	<bean name="LgsTmpReadyData" circular="1" total="106">
+		<prop name="manuId" type="string" length="4" />
+		<prop name="readyNum" type="string" length="10" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="orderNum" type="string" length="10" />
+		<prop name="readyDateChr" type="string" length="8" />
+		<prop name="readyT" type="string" length="4" />
+		<prop name="qltDecideCode" type="string" length="1" />
+		<prop name="productCodeFb1" type="string" length="1" />
+		<prop name="productCodeFb2" type="string" length="3" />
+		<prop name="productCodeFb3" type="string" length="1" />
+		<prop name="productName" type="string" length="20" />
+		<prop name="storehouseCode" type="string" length="3" />
+		<prop name="readyStatus" type="string" length="2" />
+		<prop name="weightReadyTot" type="float" length="10"
+			decimal="3" />
+		<prop name="NReadyTot" type="string" length="5" />
+		<prop name="trnpModeCode" type="string" length="4" />
+		<prop name="dlvSpotCode" type="string" length="8" />
+		<prop name="privateRouteCode" type="string" length="2" />
+	</bean>
+
+	<!-- 准发材料数据 -->
+	<bean name="LgsTmpReadyMaterial" circular="1" total="248">
+		<prop name="manuId" type="string" length="4" />
+		<prop name="packNum" type="string" length="11" />
+		<prop name="storehouseCode" type="string" length="3" />
+		<prop name="weightActive" type="float" length="10" decimal="3" />
+		<prop name="weightTheo" type="float" length="10" decimal="3" />
+		<prop name="packStatus" type="string" length="2" />
+		<prop name="lengthProduct" type="string" length="10" />
+		<prop name="lengthProductMax" type="string" length="10" />
+		<prop name="widthProduct" type="string" length="7" />
+		<prop name="thickProduct" type="string" length="6" />
+		<prop name="typeProduct" type="string" length="1" />
+		<prop name="NPack" type="string" length="5" />
+		<prop name="readyNum" type="string" length="10" />
+		<prop name="readyDateChr" type="string" length="8" />
+		<prop name="readyT" type="string" length="4" />
+		<prop name="productionDate" type="string" length="8" />
+		<prop name="productionT" type="string" length="4" />
+		<prop name="orderNum" type="string" length="10" />
+		<prop name="qltDecideCode" type="string" length="1" />
+		<prop name="steelgrade" type="string" length="8" />
+		<prop name="heatNum" type="string" length="6" />
+		<prop name="layerThick" type="string" length="6" />
+		<prop name="coatingType" type="string" length="6" />
+		<prop name="csngCodeHotLbl" type="string" length="2" />
+		<prop name="refineLabel" type="string" length="1" />
+		<prop name="productCodeFb1" type="string" length="1" />
+		<prop name="productCodeFb2" type="string" length="3" />
+		<prop name="productCodeFb3" type="string" length="1" />
+		<prop name="productCode1" type="string" length="5" />
+		<prop name="weightType" type="string" length="1" />
+		<prop name="shopsign" type="string" length="16" />
+		<prop name="shapeCode" type="string" length="2" />
+		<prop name="spec1Thick" type="string" length="7" />
+		<prop name="spec2Thick" type="string" length="7" />
+		<prop name="spec3Thick" type="string" length="7" />
+		<prop name="spec1Length" type="string" length="9" />
+		<prop name="spec2Length" type="string" length="9" />
+		<prop name="spec3Length" type="string" length="9" />
+		<prop name="spec4Length" type="string" length="9" />
+		<prop name="spec5Length" type="string" length="9" />
+	</bean>
+
+	<!-- 准发红冲数据 -->
+	<bean name="LgsTmpReadyRed" circular="1" total="82">
+		<prop name="manuId" type="string" length="4" />
+		<prop name="packNum" type="string" length="11" />
+		<prop name="managementMark" type="string" length="1" />
+		<prop name="dateAi1" type="string" length="8" />
+		<prop name="TAi1" type="string" length="4" />
+		<prop name="weightActive" type="float" length="10" decimal="3" />
+		<prop name="weightTheo" type="float" length="10" decimal="3" />
+		<prop name="readyNum" type="string" length="10" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="orderNum" type="string" length="10" />
+		<prop name="readyDateChr" type="string" length="8" />
+		<prop name="readyT" type="string" length="4" />
+	</bean>
+
+	<!-- 提单明细 -->
+	<bean name="TplMessageBillItem" circular="10" total="206">
+		<prop name="productType" type="string" length="10" />
+		<prop name="productName" type="string" length="30" />
+		<prop name="companyCode" type="string" length="2" />
+		<prop name="orderNum" type="string" length="10" />
+		<prop name="packId" type="string" length="20" />
+		<prop name="packType" type="string" length="1" />
+		<prop name="netWeight" type="float" length="18" decimal="6" />
+		<prop name="grossWeight" type="float" length="18" decimal="6" />
+		<prop name="unitCount" type="int" length="5" />
+		<prop name="specDesc" type="string" length="60" />
+		<prop name="shopsign" type="string" length="20" /><!--
+			<prop name="trInvoiceTitltName" type="string" length="60" />
+			<prop name="trTaxNum" type="string" length="30" />
+			<prop name="stInvoiceTitltName" type="string" length="60" />
+			<prop name="stTaxNum" type="string" length="30" />
+		-->
+		<prop name="innrerUnitIdEm" type="string" length="4" />
+		<prop name="settleUserNum" type="string" length="6" />
+		<prop name="orderBusinessType" type="string" length="2" /><!-- 合同业务类型 -->
+	</bean>
+
+	<!-- message add by panyouyong 20120516 -->
+	<!-- 准发电文明细-->
+	<bean name="LgsMessageReadyMaterial" circular="20" total="138">
+		<prop name="packNum" type="string" length="15" />
+		<prop name="storehousePlace" type="string" length="8" />
+		<prop name="weightActive" type="float" length="8" decimal="3" />
+		<prop name="weightTheo" type="float" length="8" decimal="3" />
+		<prop name="lengthProduct" type="int" length="9" />
+		<prop name="widthProduct" type="float" length="7" decimal="2" />
+		<prop name="thickProduct" type="float" length="6" decimal="3" />
+		<prop name="NPack" type="int" length="4" />
+		<prop name="heatNum" type="string" length="10" />
+		<prop name="productCode" type="string" length="5" />
+		<prop name="productCodeFb1" type="string" length="1" />
+		<prop name="shopsign" type="string" length="20" />
+		<prop name="steelgrade" type="string" length="8" />
+		<prop name="csngCodeHotLbl" type="string" length="2" />
+		<prop name="qltDecideCode" type="string" length="1" />
+		<prop name="realFlag" type="string" length="1" />
+		<prop name="testLotNum" type="string" length="7" />
+		<prop name="lengthProductMin" type="int" length="9" />
+		<prop name="lengthProductMax" type="int" length="9" />
+	</bean>
+	<!-- message add by panyouyong 20120516 -->
+
+	<!-- message add by panyouyong 20120612 -->
+	<!-- 船批信息电文明细-->
+	<bean name="TplTransSeq" circular="8" total="28">
+		<prop name="shipId" type="string" length="8" />
+		<prop name="carryCmpaCode" type="string" length="6" />
+		<prop name="carryCompany" type="string" length="6" />
+		<prop name="destPortCode" type="string" length="8" />
+	</bean>
+	<!-- message add by panyouyong 20120612 -->
+
+	<!-- message add by panyouyong 20120727 -->
+	<!-- 虚捆包电文明细-->
+	<bean name="LgsMessagePickMaterial" circular="170" total="23">
+		<prop name="packNum" type="string" length="15" />
+		<prop name="weightActive" type="float" length="8" decimal="3" />
+	</bean>
+	<!-- message add by panyouyong 20120727 -->
+	
+	<!-- 20140811  yesimin-->
+	<!-- 出厂、转库码单明细-->
+	<bean name="TplMessageStackOutPack" circular="30" total="115">
+		<prop name="manuId" type="string" length="4" />
+		<prop name="stackingRecNum" type="string" length="20" />
+		<prop name="pickNum" type="string" length="20" />
+		<prop name="packNum" type="string" length="30" />
+		<prop name="weightActive" type="float" length="18" decimal="6"/>
+		<prop name="weightTheo" type="float" length="18" decimal="6" />
+		<prop name="NPack" type="int" length="5" />
+	</bean>
+	
+	<bean name="TplMessageEntryPermitItem" circular="4" total="237">
+		<prop name="materialNum" type="string" length="15" />
+		<prop name="mcName" type="string" length="20" />
+		<prop name="mcCode" type="string" length="20" />
+		<prop name="gysName" type="string" length="32" />
+		<prop name="gysCode" type="string" length="32" />
+		<prop name="matName" type="string" length="32" />
+		<prop name="matCode" type="string" length="32" />
+		<prop name="matNorms" type="string" length="32" />
+		<prop name="matNum" type="int" length="3" />
+		<prop name="matWeight" type="int" length="9" />
+		<prop name="matUnit" type="string" length="10" />
+	</bean>
+	
+	<bean name="TplMessageTrainsLoading" circular="1" total="616">
+		<prop name="carNo" type="string" length="20"/>
+		<prop name="carType" type="string" length="10"/>
+		<prop name="leCode" type="string" length="1"/>
+		<prop name="curStnCode" type="string" length="8"/>
+		<prop name="curStnName" type="string" length="16"/>
+		<prop name="curStnChar" type="string" length="8"/>
+		<prop name="arrDepAdm" type="string" length="2"/>
+		<prop name="arrDepDate" type="string" length="10"/>
+		<prop name="arrDepTime" type="string" length="10"/>
+		<prop name="shpName" type="string" length="75"/>
+		<prop name="conName" type="string" length="75"/>
+		<prop name="cdyOrgStn" type="string" length="8"/>
+		<prop name="cdyOStnName" type="string" length="16"/>
+		<prop name="orgAdm" type="string" length="2"/>
+		<prop name="destStn" type="string" length="8"/>
+		<prop name="destStnName" type="string" length="16"/>
+		<prop name="destAdm" type="string" length="2"/>
+		<prop name="cdyCode" type="string" length="7"/>
+		<prop name="cdyName" type="string" length="22"/>
+		<prop name="wbId" type="string" length="20"/>
+		<prop name="wbNbr" type="string" length="7"/>
+		<prop name="wbDate" type="string" length="10"/>
+		<prop name="wbTime" type="string" length="8"/>
+		<prop name="wbYdqx" type="float" length="3" decimal="0"/>
+		<prop name="wbZzl" type="int" length="10"/>
+		<prop name="wbZlc" type="int" length="5"/>
+		<prop name="wbJflc" type="int" length="5"/>
+		<prop name="wbJs" type="int" length="5"/>
+		<prop name="wbZyf" type="int" length="10"/>
+		<prop name="loadFlag" type="string" length="2"/>
+		<prop name="errorCode" type="string" length="1"/>
+		<prop name="errorDesc" type="string" length="200"/>
+		<prop name="createDate" type="string" length="14"/>
+	</bean>
+	
+	<bean name="TplMessageTrainsOnLoad" circular="1" total="692">
+		<prop name="carNo" type="string" length="20" />
+		<prop name="carKind" type="string" length="3" />
+		<prop name="carType" type="string" length="10" />
+		<prop name="carOilType" type="string" length="1" />
+		<prop name="carLightWgt" type="int" length="10" />
+		<prop name="carCaplbs" type="int" length="10" />
+		<prop name="carMarkWgt" type="int" length="10" />
+		<prop name="carVolume" type="float" length="10" decimal="1" />
+		<prop name="carOrder" type="int" length="5" />
+		<prop name="leCode" type="string" length="1" />
+		<prop name="curStnCode" type="string" length="8" />
+		<prop name="curStnName" type="string" length="16" />
+		<prop name="curStnChar" type="string" length="8" />
+		<prop name="arrDepAdm" type="string" length="2" />
+		<prop name="arrDepDate" type="string" length="10" />
+		<prop name="arrDepTime" type="string" length="8" />
+		<prop name="arrDepId" type="string" length="1" />
+		<prop name="trainNo" type="string" length="20" />
+		<prop name="bndryFlag" type="float" length="1" decimal="0" />
+		<prop name="trainDir" type="float" length="1" decimal="0" />
+		<prop name="shpName" type="string" length="75" />
+		<prop name="conName" type="string" length="75" />
+		<prop name="cdyOrgStn" type="string" length="8" />
+		<prop name="cdyOStnName" type="string" length="16" />
+		<prop name="orgAdm" type="string" length="2" />
+		<prop name="destStn" type="string" length="3" />
+		<prop name="destStnName" type="string" length="16" />
+		<prop name="destAdm" type="string" length="2" />
+		<prop name="cdyCode" type="string" length="7" />
+		<prop name="cdyName" type="string" length="22" />
+		<prop name="wbId" type="string" length="20" />
+		<prop name="wbNbr" type="string" length="7" />
+		<prop name="wbDate" type="string" length="10" />
+		<prop name="wbTime" type="string" length="8" />
+		<prop name="wbYdqx" type="float" length="3" decimal="0" />
+		<prop name="wbZzl" type="int" length="10" />
+		<prop name="wbZlc" type="int" length="5" />
+		<prop name="wbJflc" type="int" length="5" />
+		<prop name="wbJs" type="int" length="5" />
+		<prop name="wbZyf" type="int" length="10" />
+		<prop name="param1" type="string" length="200" />
+		<prop name="param2" type="string" length="14" />
+		<prop name="createDate" type="string" length="14" />
+	</bean>
+	
+	<bean name="TplMessageTransPackMtm" circular="20" total="86">
+     	<prop name="companyCode" type="string" length="2" />
+     	<prop name="orderNum" type="string" length="20" />
+     	<prop name="packId" type="string" length="20" />
+     	<prop name="netWeight" type="float" length="18" decimal="6" />
+     	<prop name="grossWeight" type="float" length="18" decimal="6" />
+     	<prop name="unitCount" type="int" length="8" />
+	</bean>
+	
+	<!-- 自提车辆配载材料信息 -->
+	<bean name="TplMessageCarPlanItem" circular="40" total="365">
+		<prop name="packNo" type="string" length="13"/>
+		<prop name="pickNo" type="string" length="20"/>
+		<prop name="orderNum" type="string" length="20"/>
+		<prop name="grossWeight" type="float" length="18" decimal="6" />
+		<prop name="netWeight" type="float" length="18" decimal="6" />
+		<prop name="count" type="int" length="6"/>
+		<prop name="productName" type="string" length="30"/>
+		<prop name="ladingSpotId" type="string" length="20"/>
+		<prop name="ladingSpotName" type="string" length="100"/>
+		<prop name="destSpotId" type="string" length="20"/>
+		<prop name="destSpotName" type="string" length="100"/>
+	</bean>
+	
+	<!-- 自提车离库实绩详细[XLXZ46] -->
+	<bean name="TplMessageCarLeaveItem" circular="40" total="13">
+		<prop name="packNo" type="string" length="13"/>
+	</bean>
+	
+	<!-- 库区排队信息详细 -->
+	<bean name="TplMessageKqListItem" circular="30" total="33">
+		<prop name="carNum" type="string" length="10"/>
+		<prop name="seqId" type="int" length="3"/>
+		<prop name="carPickNo" type="string" length="20"/>
+	</bean>
+	
+	<!-- 3.1.4.1要货计划（自提转水运）[XLXZ40]明细 -->
+	<!--<bean name="TplMDeliveryPlanItem" circular="100" total="13">
+		<prop name="custMatNo" type="string" length="13"/>
+	</bean>
+	-->
+	
+	<!-- 出库队列（装载计划）[XLXZ41]明细 -->
+	<bean name="TplMOutListItem" circular="80" total="46"> 
+		<prop name="custMatNo" type="string"  length="13"/>
+		<prop name="billOfLadingNo" type="string"  length="13"/>
+		<prop name="pickLotNo" type="string"  length="10"/>
+		<prop name="orderNo" type="string"  length="10"/>
+	</bean>
+</beans>

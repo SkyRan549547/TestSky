@@ -1,0 +1,127 @@
+package NewTest;
+
+import java.util.Date;
+
+/**
+ * AbstractTplSelfmentionIrontrans entity provides the base persistence
+ * definition of the TplSelfmentionIrontrans entity. @author MyEclipse
+ * Persistence Tools
+ */
+
+public abstract class AbstractTplSelfmentionIrontrans implements
+		java.io.Serializable {
+
+	// Fields
+
+	private Long id;
+	private String reqPlanNo;
+	private String reqLotNo;
+	private Integer reqNum;
+	private Date startReqTime;
+	private Date endReqTime;
+	private String preLotNo;
+	private String loadingAbility;
+	private Date createDate;
+
+	// Constructors
+
+	/** default constructor */
+	public AbstractTplSelfmentionIrontrans() {
+	}
+
+	/** minimal constructor */
+	public AbstractTplSelfmentionIrontrans(Long id) {
+		this.id = id;
+	}
+
+	/** full constructor */
+	public AbstractTplSelfmentionIrontrans(Long id, String reqPlanNo,
+			String reqLotNo, Integer reqNum, Date startReqTime,
+			Date endReqTime, String preLotNo, String loadingAbility,
+			Date createDate) {
+		this.id = id;
+		this.reqPlanNo = reqPlanNo;
+		this.reqLotNo = reqLotNo;
+		this.reqNum = reqNum;
+		this.startReqTime = startReqTime;
+		this.endReqTime = endReqTime;
+		this.preLotNo = preLotNo;
+		this.loadingAbility = loadingAbility;
+		this.createDate = createDate;
+	}
+
+	// Property accessors
+
+	public Long getId() {
+		return this.id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getReqPlanNo() {
+		return this.reqPlanNo;
+	}
+
+	public void setReqPlanNo(String reqPlanNo) {
+		this.reqPlanNo = reqPlanNo;
+	}
+
+	public String getReqLotNo() {
+		return this.reqLotNo;
+	}
+
+	public void setReqLotNo(String reqLotNo) {
+		this.reqLotNo = reqLotNo;
+	}
+
+	public Integer getReqNum() {
+		return this.reqNum;
+	}
+
+	public void setReqNum(Integer reqNum) {
+		this.reqNum = reqNum;
+	}
+
+	public Date getStartReqTime() {
+		return this.startReqTime;
+	}
+
+	public void setStartReqTime(Date startReqTime) {
+		this.startReqTime = startReqTime;
+	}
+
+	public Date getEndReqTime() {
+		return this.endReqTime;
+	}
+
+	public void setEndReqTime(Date endReqTime) {
+		this.endReqTime = endReqTime;
+	}
+
+	public String getPreLotNo() {
+		return this.preLotNo;
+	}
+
+	public void setPreLotNo(String preLotNo) {
+		this.preLotNo = preLotNo;
+	}
+
+	public String getLoadingAbility() {
+		return this.loadingAbility;
+	}
+
+	public void setLoadingAbility(String loadingAbility) {
+		this.loadingAbility = loadingAbility;
+	}
+
+	public Date getCreateDate() {
+		return this.createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+}

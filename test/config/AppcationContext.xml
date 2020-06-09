@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xlmns:context = "http://ww.springframwork.org/schema/context"
+default-lazy-init="false" default-dependency-check="none" default-autowire="no">
+	
+	<context:component-scan base-pakage="src.spring.java.com">
+	</context:component-scan>
+	<context:property-placeholder location=""></context:property-placeholder>
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+    <bean id="manyDataSourceAspct" class="com.com.study.complain.com.aop.DataSourceAspect"></bean>
+    <aop:config>
+        <aop:aspect ref="manyDataSourceAspct">
+            <aop:pointcut id="p1" expression="excution(* *(..))"/>
+            <aop:before method="before"  pointcut-ref="p1"></aop:before>
+        </aop:aspect>
+     </aop:config>
+	
+</beans>

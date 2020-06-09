@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.ouyeel56.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="TPLOutPerformanceWS" targetNamespace="http://www.ouyeel56.com/">  
+  <wsdl:types> 
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://www.ouyeel56.com/" version="1.0">  
+      <xs:element name="receiveOutPerformanceInfo" type="tns:receiveOutPerformanceInfo"/>  
+      <xs:element name="receiveOutPerformanceInfoResponse" type="tns:receiveOutPerformanceInfoResponse"/>  
+      <xs:complexType name="receiveOutPerformanceInfo"> 
+        <xs:sequence> 
+          <xs:element minOccurs="0" name="outPerformParamList" type="xs:string"/> 
+        </xs:sequence> 
+      </xs:complexType>  
+      <xs:complexType name="receiveOutPerformanceInfoResponse"> 
+        <xs:sequence> 
+          <xs:element minOccurs="0" name="TPLOutPerformResp" type="xs:string"/> 
+        </xs:sequence> 
+      </xs:complexType> 
+    </xs:schema> 
+  </wsdl:types>  
+  
+  <wsdl:message name="receiveOutPerformanceInfo"> 
+    <wsdl:part element="tns:receiveOutPerformanceInfo" name="parameters"></wsdl:part> 
+  </wsdl:message>  
+  
+  <wsdl:message name="receiveOutPerformanceInfoResponse"> 
+    <wsdl:part element="tns:receiveOutPerformanceInfoResponse" name="parameters"></wsdl:part> 
+  </wsdl:message>  
+  
+  <wsdl:portType name="TPLOutPerformanceWS"> 
+    <wsdl:operation name="receiveOutPerformanceInfo"> 
+      <wsdl:input message="tns:receiveOutPerformanceInfo" name="receiveOutPerformanceInfo"></wsdl:input>  
+      <wsdl:output message="tns:receiveOutPerformanceInfoResponse" name="receiveOutPerformanceInfoResponse"></wsdl:output> 
+    </wsdl:operation> 
+  </wsdl:portType>  
+  
+  <wsdl:binding name="TPLOutPerformanceWSSoapBinding" type="tns:TPLOutPerformanceWS"> 
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>  
+    <wsdl:operation name="receiveOutPerformanceInfo"> 
+      <soap:operation soapAction="" style="document"/>  
+      <wsdl:input name="receiveOutPerformanceInfo"> 
+        <soap:body use="literal"/> 
+      </wsdl:input>  
+      <wsdl:output name="receiveOutPerformanceInfoResponse"> 
+        <soap:body use="literal"/> 
+      </wsdl:output> 
+    </wsdl:operation> 
+  </wsdl:binding>  
+  
+  <wsdl:service name="TPLOutPerformanceWS"> 
+    <wsdl:port binding="tns:TPLOutPerformanceWSSoapBinding" name="TPLOutPerformanceWSImplPort"> 
+      <soap:address location="http://10.60.146.52:8080/ouyeel-openapi/services/tpl-outPerformanceWS"/> 
+    </wsdl:port> 
+  </wsdl:service> 
+  
+</wsdl:definitions>

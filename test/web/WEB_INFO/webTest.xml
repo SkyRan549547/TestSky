@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<filter>
+		<filter-name>hibernateFilter</filter-name>
+		<filter-class>
+			org.springframework.orm.hibernate3.support.OpenSessionInViewFilter
+		</filter-class>
+		<init-param>
+			<param-name>sessionFactoryBeanName</param-name>
+			<param-value>sessionFactory</param-value>
+		</init-param>
+		<init-param>
+			<param-name>singleSession</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>flushMode</param-name>
+			<param-value>AUTO</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>hibernateFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener> 
+
+	<servlet>
+		<servlet-name>reports</servlet-name>
+		<servlet-class>com.web.report.servlet.ReportServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>reports</servlet-name>
+		<!-- 可配置任意名称，但需与urlproxy保持一致 -->
+		<url-pattern>/reports/*</url-pattern>
+	</servlet-mapping>
+	
+	
+	<context-param>
+		<param-name>urlproxy</param-name>
+		<!-- url-pattern名称，前后/可有可无，如report,/report,report/,/report/ -->
+		<param-value>reports</param-value>
+	</context-param>
+	
+	<!-----------容器对于web.xml的加载过程（顺序）-------context-param >> listener  >> fileter  >> servlet---------->
+	
+	
+	
+	

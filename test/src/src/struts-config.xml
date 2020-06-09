@@ -1,0 +1,2924 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<!--
+		========== Data Sources Definitions
+		===================================
+	-->
+	<!--
+		Define your Struts data sources in a file called
+		struts-data-sources.xml and place it in your merge directory.
+	-->
+
+	<!--
+		========== Form Bean Definitions ===================================
+	-->
+	<form-beans>
+		<form-bean name="messageSendForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.MessageSendForm" />
+
+		<form-bean name="transTruckRoadCodeForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransTruckRoadCodeForm" />
+		<form-bean name="mapForm"
+			type="com.baosight.baosteel.bli.tpl.map.struts.form.MapLoctionForm" />
+
+		<form-bean name="transTruckSignMgrForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransTruckSignMgrForm" />
+		<form-bean name="fileLoadForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.FileLoadForm" />
+
+		<form-bean name="messageLogForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.MessageLogForm" />
+
+		<form-bean name="storePackNew"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.StorePackNewForm" />
+		<form-bean name="storeRedForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.StoreRedForm" />
+		<form-bean name="transportInqForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.TransportInqForm" />
+		<form-bean name="transShipUploadForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransShipUploadForm" />
+		<form-bean name="documentForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.RDocumentForm" />
+		<form-bean name="providerAccountForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.RProviderAccountForm" />
+		<form-bean name="finalUserForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.FinalUserForm" />
+		<form-bean name="stockAgreementInqForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.StockAgreementInqForm" />
+		<form-bean name="transPackForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransPackForm" />
+		<form-bean name="stockInConfirmForm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.form.StockInConfirmForm" />
+		<form-bean name="transSeqForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.TransSeqForm" />
+		<form-bean name="stockOutMgrForm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.form.StockOutMgrForm" />
+		<form-bean name="transPlanForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransPlanForm" />
+		<form-bean name="stockAdjustForm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.form.StockAdjustForm" />
+		<form-bean name="goodBillInqForm"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.form.GoodBillInqForm" />
+		<form-bean name="invoiceTitleUserForm"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.form.InvoiceTitleUserForm" />
+		<form-bean name="stockCheckForm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.form.StockCheckForm" />
+		<form-bean name="shipInqForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.ShipInqForm" />
+		<form-bean name="evaluationInqForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.EvaluationInqForm" />
+		<form-bean name="invoiceTitleChangeForm"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.form.InvoiceTitleChangeForm" />
+		<form-bean name="transFeeInvoiceForm"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.form.TransFeeInvoiceForm" />
+		<form-bean name="transportAgreementInqForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.TransportAgreementInqForm" />
+		<form-bean name="shipAbilityPredictForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.ShipAbilityPredictForm" />
+		<form-bean name="stockFeeInvoiceForm"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.form.StockFeeInvoiceForm" />
+		<form-bean name="carInqForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.CarInqForm" />
+		<form-bean name="stockOutPlanForm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.form.StockOutPlanForm" />
+		<form-bean name="transShipLoadForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransShipLoadForm" />
+		<form-bean name="transStationForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.TransStationForm" />
+
+		<form-bean name="ownerInfoForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.OwnerInfoForm" />
+		<form-bean name="transStationInqForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.TransStationInqForm" />
+		<form-bean name="stockInItemForm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.form.StockInItemForm" />
+		<form-bean name="summary"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.SummaryForm" />
+		<form-bean name="realFeeForm"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.form.RealFeeForm" />
+		<form-bean name="modifyApplyForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.ModifyApplyForm" />
+		<form-bean name="prodPlaceMgrForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.ProdPlaceMgrForm" />
+		<form-bean name="rProviderWarehouseForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.RProviderWarehouseForm" />
+		<form-bean name="selectForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.SelectForm" />
+		<form-bean name="feeRateListForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.FeeRateListForm" />
+		<!-- add at 2011-10-20  packid repeal-->
+		<form-bean name="stockOutBaleSureForm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.form.StockOutBaleSureForm" />
+		<form-bean name="stockOutSureForm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.form.StockOutSureForm" />
+		<form-bean name="transShipPlanForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransShipPlanInqForm" />
+		<form-bean name="insuranceManageForm"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.form.InsuranceManageForm" />
+		<form-bean name="shipAbilityForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.ShipAbilityForm" />
+		<form-bean name="stockInPlanForm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.form.StockInPlanForm" />
+		<form-bean name="stockInManageForm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.form.StockInManageForm" />
+		<form-bean name="transShipResultForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransShipResultForm" />
+		<form-bean name="productForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.ProductForm" />
+		<form-bean name="wproviderAbilityForm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.form.WproviderAbilityForm" />
+		<form-bean name="ownerInfoBeanForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.OwnerInfoBeanForm" />
+		<form-bean name="stockForm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.form.StockForm" />
+		<form-bean name="transShipTraceForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransShipTraceForm" />
+		<form-bean name="stockSearchForm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.form.StockSearchForm" />
+		<form-bean name="warehouseLocationForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.WarehouseLocationForm" />
+		<form-bean name="providerForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.RProviderForm" />
+		<form-bean name="rProductPriceForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.RProductPriceForm" />
+		<form-bean name="ePickForm"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.form.EPickForm" />
+		<form-bean name="stockOutVerifyEBillForm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.form.StockOutVerifyEBillForm" />
+
+		<form-bean name="statMenuForm"
+			type="com.baosight.baosteel.bli.tpl.run.struts.form.StatMenuForm" />
+
+		<form-bean name="statPlanForm"
+			type="com.baosight.baosteel.bli.tpl.run.struts.form.StatPlanForm" />
+
+		<form-bean name="statStockForm"
+			type="com.baosight.baosteel.bli.tpl.run.struts.form.StatStockForm" />
+
+		<form-bean name="statPickForm"
+			type="com.baosight.baosteel.bli.tpl.run.struts.form.StatPickForm" />
+
+		<form-bean name="statInvoiceForm"
+			type="com.baosight.baosteel.bli.tpl.run.struts.form.StatInvoiceForm" />
+
+		<form-bean name="statInvoice2FeeRateForm"
+			type="com.baosight.baosteel.bli.tpl.run.struts.form.StatInvoice2FeeRateForm" />
+		<form-bean name="statModuleForm"
+			type="com.baosight.baosteel.bli.tpl.run.struts.form.StatModuleForm" />
+		<form-bean name="statMonthForm"
+			type="com.baosight.baosteel.bli.tpl.run.struts.form.StatMonthForm" />
+		<form-bean name="statMonthDetailForm"
+			type="com.baosight.baosteel.bli.tpl.run.struts.form.StatMonthDetailForm" />
+		<form-bean name="statPickByDateForm"
+			type="com.baosight.baosteel.bli.tpl.run.struts.form.StatPickByDateForm" />
+		<form-bean name="statDisPickForm"
+			type="com.baosight.baosteel.bli.tpl.run.struts.form.StatDisPickForm" />
+		<form-bean name="epickPromiseeForm"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.form.EpickPromiseeForm" />
+		<form-bean name="epickChapterForm"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.form.EpickChapterForm" />
+		<form-bean name="epickLawForm"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.form.EpickLawForm" />
+		<form-bean name="epickWareForm"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.form.EpickWareForm" />
+		<form-bean name="epickManageForm"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.form.EpickManageForm" />
+		<form-bean name="eSignForm"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.form.ESignForm" />
+
+		<!-- start add by illy 20110620 -->
+		<form-bean name="epickPrintForm"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.form.EpickPrintForm" />
+		<!-- end add by illy 20110620 -->
+
+		<form-bean
+			type="com.baosight.common.message.checkmessage.CheckMessageForm"
+			name="CheckMessageForm" />
+		<form-bean
+			type="com.baosight.common.message.checkmessage.SendMessageForm"
+			name="SendMessageForm" />
+
+		<form-bean name="planfeeUpdataInvtitleForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.PlanfeeUpdataInvtitleForm" />
+
+		<!-- warehouseAutoManageForm begin zhangpeng 20080903 -->
+		<form-bean name="warehouseAutoManageForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.WarehouseAutoManageForm" />
+		<!-- warehouseAutoManageForm end zhangpeng 20080903 -->
+		<!--FeeUpdateRecodeForm begin zhangpeng 20080909  -->
+		<form-bean name="feeUpdateRecodeForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.FeeUpdateRecodeForm">
+		</form-bean>
+		<!--FeeUpdateRecodeForm end zhangpeng 20080909  -->
+
+		<!--
+			UupBusinessForm and InsuranceGenRuleForm begin zhangpeng 20080925
+		-->
+		<form-bean name="uupBusinessForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.UupBusinessForm" />
+		<form-bean name="insuranceGenRuleForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.InsuranceGenRuleForm" />
+		<form-bean name="transBusinessForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.TransBusinessForm" />
+		<!-- UupBusinessForm and InsuranceGenRuleForm end zhangpeng 20080925 -->
+		<!-- begin add by huangjm 20080918-->
+		<form-bean name="deletePlanForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.DeletePlanForm" />
+		<form-bean name="procedureForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.ProcedureForm" />
+		<!-- end add by huangjm 20080918-->
+
+		<!-- formbean Start Add By tangaj 20110811 -->
+		<form-bean name="tplUnitManageForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.TplUnitManageForm" />
+		<!-- formbean End Add By tangaj 20110811 -->
+
+		<!--begin add by majingjing 2011-11-03  -->
+		<form-bean name="driverForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.DriverForm" />
+		<form-bean name="tplHeadstockForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.TplHeadstockForm" />
+		<form-bean name="tplTrailerForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.TplTrailerForm" />
+		<form-bean name="TplVehDistributionForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.TplVehDistributionForm" />
+		<form-bean name="TplDestinationForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.TplDestinationForm" />
+		<form-bean name="TruckDisPlanForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TruckDisPlanForm" />
+		<!--end add by majingjing 2011-11-03  -->
+		<!--begin add by panyouyong 2012-07-16  -->
+		<form-bean name="transTruckStatisticsForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransTruckStatisticsForm" />
+		<!--end add by panyouyong 2012-07-16  -->
+		<form-bean name="transShipPortFeeForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransShipPortFeeForm" />
+		<!-- InvoiceLimitForm -->
+		<form-bean name="invoiceLimitForm"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.form.InvoiceLimitForm" />
+		<!-- invoiceSplitForm formBean -->
+		<form-bean name="invoiceSplitForm"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.form.StockFeeInvoiceSplitForm" />
+
+		<!-- TraceMgrForm formBean -->
+		<form-bean name="TraceMgrForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.form.TraceMgrForm" />
+
+		<!-- tangaj modify -->
+		<form-bean name="TplDestinationForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.TplDestinationForm" />
+		<!-- tangaj modify -->
+		<!--begin add by llk 2013-4-7  -->
+		<form-bean name="transShipStatisticsForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransShipStatisticsForm" />
+		<!--end  by llk 2013-4-7  -->
+		<!-- tangaj modify -->
+		<!--begin add by chenxf 2014-3-13  -->
+		<form-bean name="transChooStatisticsForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransChooStatisticsForm" />
+		<!---begin add by chenxf 2014-3-13   -->
+
+		<!--运输计划统计Form WDR 2014/04/29 -->
+		<form-bean name="TransPlanStatisticsForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransPlanStatisticsForm" />
+
+		<form-bean name="UserProblemForm"
+			type="com.baosight.baosteel.bli.tpl.userproblem.struts.form.UserProblemForm" />
+
+		<!--进厂证FORM  20150109  yesimin -->
+		<form-bean name="EntryPermitForm"
+			type="com.baosight.baosteel.bli.tpl.entry.struts.form.EntryPermitForm" />
+		<form-bean name="InfocardForm"
+			type="com.baosight.baosteel.bli.tpl.entry.struts.form.InfocardForm" />
+		<!--手动发送电文信息，同步到宝盈通 add ljh 20150815 -->	
+		<form-bean name="SendInPlanForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.SendInPlanForm" />
+		<form-bean name="SendInGoodsForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.SendInGoodsForm" />
+		<form-bean name="SendContractForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.SendContractForm" />
+		<form-bean name="SendLineoutForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.SendLineoutForm" />
+		
+		<form-bean name="SendTransPlanForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.SendTransPlanForm"/>
+		<form-bean name="SendInvoiceForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.SendInvoiceForm"/>
+		<form-bean name="SendInvoiceRedForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.SendInvoiceRedForm"/>
+		<form-bean name="tplPMobileQualityForm"
+			type="com.baosight.baosteel.bli.tpl.maintain.form.TplPMobileQualityForm" />	
+		<form-bean name="EntryPermitZjForm" 
+			type="com.baosight.baosteel.bli.tpl.entry.struts.form.EntryPermitZjForm"/>
+		<form-bean name="TransTrainsForm" 
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransTrainsForm"/>
+	    <form-bean name="shipManagerMtmForm" 
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.ShipManagerMtmForm"/>
+	    <form-bean name="tplTransRulesFrom" 
+	    	type="com.baosight.baosteel.bli.tpl.transport.struts.form.TplTransRulesFrom"/>
+	    <form-bean name="mobileForm" 
+			type="com.baosight.baosteel.bli.tpl.pad.mobile.struts.form.MobileForm" />
+		<form-bean name="tplCarPlanForm"
+	    	type="com.baosight.baosteel.bli.tpl.base.struts.form.TplCarPlanForm" />
+	    <!--<form-bean name="transConDistributeForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransConDistributeForm" />
+		<form-bean name="transLoadingForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.form.TransLoadingForm" />-->
+		<form-bean name="tplOverhaulForm"
+	    	type="com.baosight.baosteel.bli.tpl.base.struts.form.TplOverhaulForm" />
+	    <form-bean name="tplTransSeqForm"
+	    	type="com.baosight.baosteel.bli.tpl.transport.struts.form.TplTransSeqForm" />	
+	    <form-bean name="zGWarehouseForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.ZGWarehouseForm" />
+		<form-bean name="warehouseLineUpForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.WarehouseLineUpForm" />
+		<form-bean name="carArrivePositionForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.CarArrivePositionForm" />
+		<form-bean name="selfExtractionTrainForm"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.form.SelfExtractionTrainForm" />
+	</form-beans>
+
+
+
+
+
+
+	<!--
+		========== Global Exceptions Definitions
+		===================================
+	-->
+	<!--	<global-exceptions>-->
+	<!--
+		<exception key="exception.key"
+		type="jcom.baosight.baosteel.demo.exception.BaosteelException"
+	-->
+	<!--
+		handler="com.baosight.baosteel.demo.exception.BaosteelExceptionHandler"
+	-->
+	<!--			path="/WEB-INF/error.jsp" />-->
+	<!--	</global-exceptions>-->
+
+	<!--
+		========== Global Forward Definitions
+		===================================
+	-->
+	<global-forwards>
+		<!--		<forward name="login" path="/bindSession.jsp"/>-->
+		<!--		<forward name="message" path="system.message" />-->
+		<!--		<forward name="exception" path="/exception.jsp" />-->
+		<!--		<forward name="notAuthorized" path="/notAuthorized.jsp" />-->
+		<!--		<forward name="repeat" path="/repeat.jsp" />-->
+		<forward name="fail" path="3pl.common.error" redirect="false" />
+	</global-forwards>
+
+	<!--
+		========== Action Mapping Definitions
+		===================================
+	-->
+	<action-mappings>
+
+		<action path="/index"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="/3pl/index.htm" />
+
+		<action path="/3pl/login"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.LoginAction"
+			scope="request" unknown="false" validate="false">
+			<forward name="success" path="/3pl/main.jsp"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+
+		<action path="/base/FileLoad"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.FileLoadAction"
+			name="fileLoadForm" scope="request" unknown="false"
+			validate="false">
+
+			<forward name="success" path="fileload.success"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+
+		<action path="/base/MessageLog"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.MessageLogAction"
+			name="messageLogForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="messageLog" path="base.messagelog.view"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+
+		<action path="/supplier/transStation"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.TransStationAction"
+			name="transStationForm" scope="request"
+			input="resource.transstation.listtransstation" unknown="false"
+			validate="false">
+			<forward name="listtransstation"
+				path="resource.transstation.listtransstation" redirect="false" />
+			<forward name="viewtransstation"
+				path="resource.transstation.viewtransstation" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/rProductPrice"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.RProductPriceAction"
+			name="rProductPriceForm" scope="request"
+			input="resource.productPrice.listProductPrice" unknown="false"
+			validate="false">
+			<forward name="listProductPrice"
+				path="resource.productPrice.listProductPrice" redirect="false" />
+			<forward name="newProductPrice"
+				path="resource.productPrice.newProductPrice" redirect="false" />
+			<forward name="productpricetoalt"
+				path="resource.productPrice.productpricetoalt" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/feeRate"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.FeeRateAction"
+			name="feeRateListForm" scope="request"
+			input="/3pl/supplier/fee_rate_list.jsp" unknown="false"
+			validate="false">
+			<forward name="feeRateList" path="supplier.feeRate.query"
+				redirect="false" />
+			<forward name="feeRateDetail" path="supplier.feeRate.view"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/stock/stockInManage"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.StockInManageAction"
+			name="stockInManageForm" scope="request"
+			input="/3pl/stock/InStorePlanEdit.jsp" unknown="false"
+			validate="false">
+			<forward name="instoremanageedit"
+				path="stock.StockInManage.instoremanageedit" redirect="false" />
+			<forward name="mStockInPlanList"
+				path="stock.StockInPlan.mStockInPlanList" redirect="false" />
+			<forward name="queryInStorePlanMgr"
+				path="stock.StockInPlan.queryInStorePlanMgr" redirect="false" />
+			<forward name="instorebilledit"
+				path="stock.stockinmanage.instorebilledit" redirect="false" />
+			<forward name="stockScaning"
+				path="stock.stockinmanage.stockScaning" redirect="false" />
+			<forward name="StockInList"
+				path="stock.stockconfirm.listinstockbill" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+			<forward name="stockVehicle"
+				path="stock.stockinmanage.stockVehicle" redirect="false" />
+		</action>
+		<action path="/supplier/transportInq"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.TransportInqAction"
+			name="transportInqForm" scope="request"
+			input="supplier.transportInq.query" unknown="false"
+			validate="false">
+			<forward name="transportInqPage"
+				path="supplier.transportInq.query" redirect="false" />
+			<forward name="transportView"
+				path="supplier.transportInq.view" redirect="false" />
+		</action>
+		<action path="/transport/transChooPack"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransChooPackAction"
+			name="transPackForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transChooStorePackNew"
+				path="transport.transChooPack.transChooStorePackNew"
+				redirect="false" />
+			<forward name="transChooStorePackAlt"
+				path="transport.transChooPack.transChooStorePackAlt"
+				redirect="false" />
+			<forward name="transChooPlanMgr"
+				path="transport.transChooPack.transChooPlanMgr" redirect="false" />
+			<forward name="transPackView"
+				path="transport.transChooPack.transPackView" redirect="false" />
+			<forward name="updateTransPlan"
+				path="transport.transChooPack.updateTransPlan" redirect="false" />
+			<forward name="queryTransPack"
+				path="transport.transChooPack.queryTransPack" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/transport/transTruckUpload"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransTruckUploadAction"
+			name="transSeqForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transCarUpload"
+				path="transport.transTruckUpload.transCarUpload" redirect="false" />
+			<forward name="transCarUpload2"
+				path="transport.transTruckUpload.transCarUpload2" redirect="false" />
+			<forward name="queryTransTruckUpload"
+				path="transport.transTruckUpload.queryTransTruckUpload"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/transport/shipAbility"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.ShipAbilityAction"
+			name="shipAbilityForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="shipAbilityPredict"
+				path="transport.ship.shipAbilityPredict" redirect="false" />
+			<forward name="shipAbilityInfo"
+				path="transport.ship.shipAbilityInfo" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/base/tplWarehouseLocation"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.WarehouseLocationAction"
+			name="warehouseLocationForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="storagePositionDetail"
+				path="base.tplWarehouseLocation.storagePositionDetail"
+				redirect="false" />
+			<forward name="storageEdit"
+				path="base.tplWarehouseLocation.storageEdit" redirect="false" />
+			<forward name="storageEditNew"
+				path="base.tplWarehouseLocation.storageEditNew" redirect="false" />
+			<forward name="storagePositionEdit"
+				path="base.tplWarehouseLocation.storagePositionEdit"
+				redirect="false" />
+			<forward name="storagePositionAlt"
+				path="base.tplWarehouseLocation.storagePositionAlt"
+				redirect="false" />
+			<forward name="queryWarehouseLocation"
+				path="base.tplWarehouseLocation.queryWarehouseLocation"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/transport/transTruckResult"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransTruckResultAction"
+			name="transSeqForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transCarResult"
+				path="transport.transTruckResult.transCarResult" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/stockAgreementInq"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.StockAgreementInqAction"
+			name="stockAgreementInqForm" scope="request"
+			input="/3pl/supplier/StockagreementInq.jsp" unknown="false"
+			validate="false">
+			<forward name="listStockAgreementInq"
+				path="supplier.stockAgreement.query" redirect="false" />
+			<forward name="viewStockAgreementInq"
+				path="supplier.stockAgreement.view" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/shipInq"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.ShipInqAction"
+			name="shipInqForm" scope="request" input="/3pl/resource/shipInq.jsp"
+			unknown="false" validate="false">
+			<forward name="listshipinq"
+				path="resource.shipmanage.listshipinq" redirect="false" />
+			<forward name="viewshipinq"
+				path="resource.shipmanage.viewshipinq" redirect="false" />
+			<forward name="shipInfoAltNew"
+				path="resource.shipmanage.shipInfoAltNew" redirect="false" />
+			<forward name="shipReport"
+				path="resource.shipmanage.shipReport" redirect="false" />
+			<forward name="addshipinq"
+				path="resource.shipmanage.addshipinq" redirect="false" />
+			<forward name="shipInqManage"
+				path="resource.shipmanage.shipInqManage" redirect="false" />
+			<forward name="shipInqManageAdd"
+				path="resource.shipmanage.shipInqManageAdd" redirect="false" />
+			<forward name="shipInqManageAlt"
+				path="resource.shipmanage.shipInqManageAlt" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/fee/transFeeInvoiceMgr"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.action.TransFeeInvoiceMgrAction"
+			name="transFeeInvoiceForm" scope="request"
+			input="/3pl/fee/InvoiceManageInq.jsp" unknown="false"
+			validate="false">
+			<forward name="transFeeMgr"
+				path="fee.transfeemgr.querytransfeemgr" redirect="false" />
+			<forward name="viewInvoiceExport"
+				path="fee.transfeemgr.viewInvoiceExport" redirect="false" />
+			<forward name="transFeeSearch"
+				path="fee.transfeemgr.querytransfeesearch" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/fee/insuranceShipManage"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.action.InsuranceShipManageAction"
+			name="insuranceManageForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="insuranceShipManagePage"
+				path="fee.transport.insurance.ship.insuranceShipManagePage"
+				redirect="false" />
+			<forward name="insuranceShipViewPage"
+				path="fee.transport.insurance.ship.insuranceShipViewPage"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/base/selectTest"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.SelectTestAction"
+			name="selectForm" scope="request" unknown="false" validate="false">
+			<forward name="warehouseList"
+				path="/3pl/base/WarehouseList.jsp" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/fee/invoiceTitleUser"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.action.InvoiceTitleUserAction"
+			name="invoiceTitleUserForm" scope="request"
+			input="/3pl/fee/PlanFeeMgr.jsp" unknown="false" validate="false">
+			<forward name="invoiceTitleUser"
+				path="fee.invoiceTitleUser.invoiceTitleUserList" redirect="false" />
+			<forward name="invoiceTitleUserNew"
+				path="fee.invoiceTitleUser.invoiceTitleUserNew" redirect="false" />
+			<forward name="invoiceTitleUserUpdate"
+				path="fee.invoiceTitleUser.invoiceTitleUserUpdate" redirect="false" />
+
+		</action>
+		<action path="/base/select"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.SelectAction"
+			name="selectForm" scope="request" unknown="false" validate="false">
+			<forward name="consineeSelect"
+				path="/3pl/base/TransProviderFinalUser.jsp" redirect="false" />
+			<forward name="consineeSelect1"
+				path="/3pl/userproblem/TransProviderFinalUser.jsp" redirect="false" />
+			<forward name="ownerInfoSelect"
+				path="/3pl/base/OwnerInfoSelect.jsp" redirect="false" />
+			<forward name="transStationSelect"
+				path="/3pl/base/TransStationSelect.jsp" redirect="false" />
+			<forward name="tplAuthorizeRuleSelect"
+				path="/3pl/base/TplAuthorizeRuleSelect.jsp" redirect="false" />
+			<forward name="shipDetailSelect"
+				path="/3pl/base/ShipDetailSelect.jsp" redirect="false" />
+			<forward name="productSelect"
+				path="/3pl/base/ProductSelect.jsp" redirect="false" />
+			<forward name="transPlanSelect"
+				path="/3pl/base/TransPlanSelect.jsp" redirect="false" />
+			<forward name="shipSelect" path="/3pl/base/ShipSelect.jsp"
+				redirect="false" />
+			<forward name="trainIdSelect"
+				path="/3pl/base/TrainIdSelect.jsp" redirect="false" />
+			<forward name="finalUserSelect"
+				path="/3pl/base/FinalUserSelect.jsp" redirect="false" />
+			<forward name="orderNumSelect"
+				path="/3pl/base/OrderNumSelect.jsp" redirect="false" />
+			<forward name="transProviderSelect"
+				path="/3pl/base/ProviderSelect.jsp" redirect="false" />
+			<forward name="transSpot" path="/3pl/base/TransSpot.jsp"
+				redirect="false" />
+			<forward name="shipMtmSelect" path="/3pl/base/shipMtmSelect.jsp"
+				redirect="false" />
+			<forward name="packMaterialNumSelect" path="/3pl/base/packMaterialNumSelect.jsp"
+				redirect="false" />
+			<forward name="fail" path="/3pl/common/Error.jsp"
+				redirect="false" />
+		</action>
+		<action path="/transport/transTruckLoad"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransTruckLoadAction"
+			name="transSeqForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transCarLoad"
+				path="transport.transTruckLoad.transCarLoad" redirect="false" />
+			<forward name="transCarbatchLoad"
+				path="transport.transTruckLoad.transCarbatchLoad" redirect="false" />
+			<!-- add by llk 2012/9/10 -->
+			<forward name="transChooUploadDetail"
+				path="transport.transTruckLoad.transChooUploadDetail"
+				redirect="false" />
+			<forward name="transCarUploadDetail"
+				path="transport.transTruckLoad.transCarUploadDetail"
+				redirect="false" />
+			<forward name="queryTransTruckSeq"
+				path="transport.transTruckLoad.queryTransTruckSeq" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+
+			<!--add by llk  20120428 truck load manage -->
+			<forward name="chooseFontAndTrailer"
+				path="transport.transTruckLoad.chooseFontAndTrailer"
+				redirect="false" />
+			<forward name="truckDisPlanForLoad"
+				path="transport.transTruckLoad.truckDisPlanForLoad"
+				redirect="false" />
+			<!-- queryTransPlanDet -->
+			<forward name="queryTransPlanDet"
+				path="transport.transTruckLoad.queryTransPlanDet" redirect="false" />
+			<!-- seqLoadInfo -->
+			<forward name="seqLoadInfo"
+				path="transport.transTruckLoad.seqLoadInfo" redirect="false" />
+			<forward name="transTruckPlanBind"
+				path="transport.transTruckLoad.transTruckPlanBind" redirect="false" />
+			<forward name="transTruckDisPlan"
+				path="transport.transTruckLoad.transTruckDisPlan" redirect="false" />
+			<forward name="transTruckDisPlanItem"
+				path="transport.transTruckLoad.transTruckDisPlanItem" redirect="false" />
+			<forward name="transTruckPlanBindNext"
+				path="transport.transTruckLoad.transTruckPlanBindNext" redirect="false" />
+			<!-- end by llk -->
+		</action>
+		<action path="/base/portAndProviderRel"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.PortAndProviderRel"
+			name="transStationInqForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="portProviderGenInfo"
+				path="base.portAndProvider.query" redirect="false" />
+			<forward name="addRelationInfo"
+				path="base.portAndProvider.add" redirect="false" />
+			<forward name="altRelationInfo"
+				path="base.portAndProvider.alt" redirect="false" />
+
+
+		</action>
+		<action path="/base/transStationInq"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.TransStationInqAction"
+			name="transStationInqForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transStationInqPage"
+				path="base.transStationInq.query" redirect="false" />
+			<forward name="transStationAltPage"
+				path="base.transStationInq.alt" redirect="false" />
+			<forward name="transStationViewPage"
+				path="base.transStationInq.view" redirect="false" />
+			<forward name="transStationNewPage"
+				path="base.transStationInq.new" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/base/prodPlaceMgr"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.ProdPlaceMgrAction"
+			name="prodPlaceMgrForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="prodPlaceMgrPage"
+				path="base.prodPlaceMgr.query" redirect="false" />
+			<forward name="prodPlaceNewPage"
+				path="base.prodPlaceMgr.new" redirect="false" />
+			<forward name="prodPlaceAltPage"
+				path="base.prodPlaceMgr.alt" redirect="false" />
+			<forward name="prodPlaceView" path="base.prodPlaceMgr.view"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/transport/transShipPlan"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransShipPlanInqAction"
+			name="transShipPlanForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transPlanFeeList"
+				path="transport.transPlanFeeList" redirect="false" />
+			<forward name="transShipPlanInq"
+				path="transport.ship.transShipPlanInq" redirect="false" />
+			<forward name="altTransShipPlanPage"
+				path="transport.ship.altTransShipPlanPage" redirect="false" />
+			<forward name="viewTransShipPlan"
+				path="transport.ship.viewTransShipPlan" redirect="false" />
+			<forward name="transPlanPackMgr"
+				path="transport.ship.transPlanPackMgr" redirect="false" />
+			<forward name="detailTransShipPlan"
+				path="transport.ship.detailTransShipPlan" redirect="false" />
+			<forward name="addTransShipPlanPage"
+				path="transport.ship.addTransShipPlanPage" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/transportAgreementInq"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.TransportAgreementInq"
+			name="transportAgreementInqForm" scope="request"
+			input="/3pl/supplier/transport_agreement_inq.jsp" unknown="false"
+			validate="false">
+			<forward name="listTransportAgreement"
+				path="supplier.transportAgreement.query" redirect="false" />
+			<forward name="viewTransportAgreement"
+				path="supplier.transportAgreement.view" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/fee/invoiceTitleChange"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.action.InvoiceTitleChangeAction"
+			name="invoiceTitleChangeForm" scope="request"
+			input="fee.invoicetitlechange.invoicetitlechange" unknown="false"
+			validate="false">
+			<forward name="InvoiceTitleChange"
+				path="fee.invoicetitlechange.invoicetitlechange" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/transport/transTruckPack"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransTruckPackAction"
+			name="transPackForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transCarStorePackNew"
+				path="transport.transTruckPack.transCarStorePackNew"
+				redirect="false" />
+			<forward name="transCarStorePackAlt"
+				path="transport.transTruckPack.transCarStorePackAlt"
+				redirect="false" />
+			<forward name="transCarPlanMgr"
+				path="transport.transTruckPack.transCarPlanMgr" redirect="false" />
+			<forward name="transPackView"
+				path="transport.transTruckPack.transPackView" redirect="false" />
+			<forward name="updateTransPlan"
+				path="transport.transTruckPack.updateTransPlan" redirect="false" />
+			<forward name="queryTransPack"
+				path="transport.transTruckPack.queryTransPack" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/tplRProvider"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.RProviderAction"
+			name="providerForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="providerInq"
+				path="supplier.tplRProvider.providerInq" redirect="false" />
+			<forward name="providerMisConfig"
+				path="supplier.tplRProvider.providerMisConfig" redirect="false" />
+			<forward name="providerMisConnect"
+				path="/supplier/tplRProvider.do?method=queryTplRProvider&amp;operate=providerMisConfig"
+				redirect="false" />
+			<forward name="queryTplRProvider"
+				path="/supplier/tplRProvider.do?method=queryTplRProvider&amp;operate=providerInq"
+				redirect="false" />
+			<forward name="providerDetail"
+				path="supplier.tplRProvider.providerDetail" redirect="false" />
+			<forward name="providerNew"
+				path="supplier.tplRProvider.providerNew" redirect="false" />
+			<forward name="providerAlt"
+				path="supplier.tplRProvider.providerAlt" redirect="false" />
+			<forward name="providerInfoAltNew"
+				path="supplier.tplRProvider.providerInfoAltNew" redirect="false" />
+			<forward name="queryProviderBaseInfo"
+				path="supplier.tplRProvider.providerBaseInfoMgr" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/stock/stockCheck"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.StockCheckAction"
+			name="stockCheckForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="liststockcheck"
+				path="stock.check.liststockcheck" redirect="false" />
+			<forward name="toCheckEdit" path="stock.check.toCheckEdit"
+				redirect="false" />
+			<forward name="altStockCheck"
+				path="stock.check.altCheckPlan" redirect="false" />
+			<forward name="storeCheckResult"
+				path="stock.check.storeCheckResult" redirect="false" />
+			<!-- add by llk stockCheck 9672-->
+			<forward name="storeCheckResult2"
+				path="stock.check.storeCheckResult2" redirect="false" />
+			<!-- end by llk stockCheck-->
+			<forward name="viewCheckId" path="stock.check.viewCheckId"
+				redirect="false" />
+			<forward name="storeCheckResultCommit"
+				path="stock.check.storeCheckResultCommit" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/fee/stockInvoiceGenerate"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.action.StockInvoiceGenerateAction"
+			name="realFeeForm" scope="request"
+			input="/3pl/fee/StockFeeCreate.jsp" unknown="false"
+			validate="false">
+			<forward name="StockFeeCreate"
+				path="fee.stockfeecreate.querystockfee" redirect="false" />
+			<forward name="viewInvoiceInfo"
+				path="fee.stockfeecreate.viewinvoiceinfo" redirect="false" />
+			<forward name="viewAccountDetail"
+				path="/3pl/fee/StockFeeDetail.jsp" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/modifyApply"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.ModifyApplyAction"
+			name="modifyApplyForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="infoAltMgr"
+				path="supplier.modifyApply.infoAltMgr" redirect="false" />
+			<forward name="infoAltDetail"
+				path="supplier.modifyApply.infoAltDetail" redirect="false" />
+			<forward name="providerInfoAltNew"
+				path="supplier.tplRProvider.providerInfoAltNew" redirect="false" />
+			<forward name="storageInfoAltNew"
+				path="base.tplRProviderWarehouse.storageInfoAltNew"
+				redirect="false" />
+			<forward name="truckInfoAltNew"
+				path="resource.carmanage.truckInfoAltNew" redirect="false" />
+			<forward name="shipInfoAltNew"
+				path="resource.shipmanage.shipInfoAltNew" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/stock/wproviderAbility"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.WproviderAbilityAction"
+			name="wproviderAbilityForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="stockAbilityPredict"
+				path="stock.wproviderAbility.stockAbilityPredict" redirect="false" />
+			<forward name="stockAbilityInfo"
+				path="stock.wproviderAbility.stockAbilityInfo" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/stock/stockAdjustPackSearch"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.StockAdjustPackSearchAction"
+			name="stockForm" scope="request" unknown="false" validate="false">
+			<forward name="stockAdjustStorePackSearch"
+				path="stock.stockAdjustPackSearch.stockAdjustStorePackSearch"
+				redirect="false" />
+			<forward name="stockAdjustStockPackView"
+				path="stock.stockAdjustPackSearch.stockAdjustStockPackView"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/transport/transShipUpload"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransShipUploadAction"
+			name="transShipUploadForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transShipUpload"
+				path="transport.ship.transShipUpload" redirect="false" />
+			<forward name="transShipUploadStatistics"
+				path="transport.ship.transShipUploadStatistics" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/tplRDocument"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.RDocumentAction"
+			name="documentForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="documentInq"
+				path="supplier.tplRDocument.documentInq" redirect="false" />
+			<forward name="document"
+				path="supplier.tplRDocument.document" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/providerAccount"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.RProviderAccountAction"
+			name="providerAccountForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="providerAccountMgr"
+				path="supplier.providerAccount.providerAccountMgr" redirect="false" />
+			<forward name="providerAccountNew"
+				path="supplier.providerAccount.providerAccountNew" redirect="false" />
+			<forward name="providerAccountDetail"
+				path="supplier.providerAccount.providerAccountDetail"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/evaluationInq"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.EvaluationInqAction"
+			name="evaluationInqForm" scope="request"
+			input="/3pl/resource/evaluation_inq.jsp" unknown="false"
+			validate="false">
+			<forward name="prodPlaceMgrPage"
+				path="supplier.evaluationInq.query" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/stock/stockInPlan"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.StockInPlanAction"
+			name="stockInPlanForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="StockInPlanList"
+				path="stock.StockInPlan.StockInPlanList" redirect="false" />
+			<forward name="mStockInPlanList"
+				path="stock.StockInPlan.mStockInPlanList" redirect="false" />
+			<forward name="updateStockInPlanList"
+				path="stock.StockInPlan.updateStockInPlanList" redirect="false" />
+			<forward name="updateStockInPlanListWLS"
+				path="stock.StockInPlan.updateStockInPlanListWLS" redirect="false" />
+			<forward name="viewStockInPlanPutinId"
+				path="stock.StockInPlan.viewStockInPlanPutinId" redirect="false" />
+			<forward name="viewStockInPlanCarrierCode"
+				path="stock.StockInPlan.viewStockInPlanCarrierCode"
+				redirect="false" />
+			<forward name="viewMgStockInPlanCarrierCode"
+				path="stock.StockInPlan.viewMgStockInPlanCarrierCode"
+				redirect="false" />
+			<forward name="viewarrivename"
+				path="stock.StockInPlan.viewarrivename" redirect="false" />
+			<forward name="mgviewarrivename"
+				path="stock.StockInPlan.mgviewarrivename" redirect="false" />
+			<forward name="queryInStorePlanMgr"
+				path="stock.StockInPlan.queryInStorePlanMgr" redirect="false" />
+			<forward name="viewStockInItem"
+				path="stock.StockInPlan.viewStockInItem" redirect="false" />
+			<forward name="toStorePackNew"
+				path="stock.StockInPlan.toStorePackNew" redirect="false" />
+			<forward name="toStorePackNewWLS"
+				path="stock.StockInPlan.toStorePackNewWLS" redirect="false" />
+			<forward name="toUpdateStockInItemWLS"
+				path="stock.StockInPlan.toUpdateStockInItemWLS" redirect="false" />
+			<forward name="toInsertStockInPlan"
+				path="stock.StockInPlan.toInsertStockInPlan" redirect="false" />
+			<forward name="viewPackId"
+				path="stock.stockconfirm.viewPackId" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		
+		<action path="/transport/transTruckPlan"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransTruckPlanAction"
+			name="transPlanForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transPlanFeeList"
+				path="transport.transPlanFeeList" redirect="false" />
+			<forward name="viewPlanExport"
+				path="transport.transTruckPlan.viewPlanExport" redirect="false" />
+			<forward name="transCarPlanInq"
+				path="transport.transTruckPlan.transCarPlanInq" redirect="false" />
+			<forward name="transCarPlanNew"
+				path="transport.transTruckPlan.transCarPlanNew" redirect="false" />
+			<forward name="transCarPlanAlt"
+				path="transport.transTruckPlan.transCarPlanAlt" redirect="false" />
+			<forward name="queryTransPlan"
+				path="transport.transTruckPlan.queryTransPlan" redirect="false" />
+			<forward name="transCarPlanPartUpload"
+				path="transport.transTruckPlan.transCarPlanPartUpload"
+				redirect="false" />
+			<forward name="transCarPlanPartUploadPad"
+				path="transport.transTruckPlan.transCarPlanPartUploadPad"
+				redirect="false" />
+
+			<forward name="transCarRepealMgr"
+				path="transport.transPlan.repealTransCarPlan" redirect="false" />
+			<forward name="transCarRepealMgrList"
+				path="transport.transPlan.repealTransCarPlanList" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+				
+			<forward name="transTruckPlanList"
+				path="transport.transTruckPlan.transTruckPlanList" redirect="false" />
+				
+			<forward name="queryDispatch"
+				path="/3pl/transport/TransTruckPlanDispatch.jsp" redirect="false" />
+			<forward name="queryPlanDetail"
+				path="/3pl/transport/TransTruckPlanDetail.jsp" redirect="false" />
+		</action>
+		<action path="/fee/goodBillInq"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.action.GoodBillInqAction"
+			name="goodBillInqForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="goodBillInqPage"
+				path="fee.transport.goodbill.goodBillInqPage" redirect="false" />
+			<forward name="goodBillNewPage"
+				path="fee.transport.goodbill.goodBillNewPage" redirect="false" />
+			<forward name="goodBillAltPage"
+				path="fee.transport.goodbill.goodBillAltPage" redirect="false" />
+			<forward name="goodBillViewPage"
+				path="fee.transport.goodbill.goodBillViewPage" redirect="false" />
+			<forward name="viewGoodExport"
+				path="fee.transport.goodbill.viewGoodExport" redirect="false" />
+			<forward name="transFeeMake"
+				path="fee.transport.makeFeePage" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/fee/insuranceTrainManage"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.action.InsuranceTrainManageAction"
+			name="insuranceManageForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="insuranceTrainManagePage"
+				path="fee.transport.insurance.train.insuranceTrainManagePage"
+				redirect="false" />
+			<forward name="insuranceTrainViewPage"
+				path="fee.transport.insurance.train.insuranceTrainViewPage"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/base/tplRProviderWarehouse"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.RProviderWarehouseAction"
+			name="rProviderWarehouseForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="storageMgr"
+				path="base.tplRProviderWarehouse.storageMgr" redirect="false" />
+			<forward name="storageDetail"
+				path="base.tplRProviderWarehouse.storageDetail" redirect="false" />
+			<forward name="storageNew"
+				path="base.tplRProviderWarehouse.storageNew" redirect="false" />
+			<forward name="providerStorageMgr"
+				path="base.tplRProviderWarehouse.providerStorageMgr"
+				redirect="false" />
+			<forward name="storageInfoAltNew"
+				path="base.tplRProviderWarehouse.storageInfoAltNew"
+				redirect="false" />
+			<forward name="queryRProviderWarehouseOfProvider"
+				path="base.tplRProviderWarehouse.queryRProviderWarehouseOfProvider"
+				redirect="false" />
+			<forward name="searchRProviderWarehouseStatus"
+				path="base.tplRProviderWarehouse.queryProviderWarehouseStatus"
+				redirect="false" />
+			<forward name="toAltRProviderWarehouseStatus"
+				path="base.tplRProviderWarehouse.AltProviderWarehouseStatus"
+				redirect="false" />
+			<forward name="queryRProviderWarehouseOfMonitor"
+				path="base.tplRProviderWarehouse.queryRProviderWarehouseOfMonitor"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/stock/stockInFollows"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.StockInFollowsAction"
+			name="stockInConfirmForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="stockinfollowslist"
+				path="stock.follows.stockinfollowslist" redirect="false" />
+			<forward name="viewPutinIdFollows"
+				path="stock.stockconfirm.instorebillviewFollows" redirect="false" />
+			<forward name="viewPackIdFollows"
+				path="stock.stockconfirm.viewPackId" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/stock/stockOutMgr"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.StockOutMgrAction"
+			name="stockOutMgrForm" scope="request"
+			input="stock.stockoutmgr.stockoutmgrlist" unknown="false"
+			validate="false">
+			<forward name="StockOutMgrList"
+				path="stock.stockoutmgr.stockoutmgrlist" redirect="false" />
+			<forward name="StockOutMgrArriveName"
+				path="stock.stockoutmgr.stockoutmgrarrivename" redirect="false" />
+			<forward name="excutestockoutwork"
+				path="stock.stockoutmgr.excutestockoutwork" redirect="false" />
+			<forward name="stockoutplanfill"
+				path="stock.stockoutmgr.stockoutplanfill" redirect="false" />
+			<forward name="generatebill"
+				path="stock.stockoutmgr.generatebill" redirect="false" />
+			<forward name="viewdetail"
+				path="stock.stockoutmgr.stockoutmgrviewdetail" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+			<!-- add by ranqiguang 20190219 -->
+			<forward name="stockoutbyshipfill"
+				path="stock.stockoutmgr.stockoutbyshipfill" redirect="false" />
+				
+		</action>
+
+		<action path="/stock/verifyEBill"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.StockOutVerifyEBillAction"
+			name="stockOutVerifyEBillForm" scope="request"
+			input="stock.stockoutmgr.verifyEBillPage" unknown="false"
+			validate="false">
+			<forward name="verifyEBillPage"
+				path="stock.stockoutmgr.verifyEBillPage" redirect="false" />
+			<forward name="excutestockoutwork"
+				path="/stock/stockOutMgr.do?method=excutestockoutwork"
+				redirect="false" />
+			<forward name="batchOutVerifyEBillPage"
+				path="stock.stockoutmgr.batchOutVerifyEBillPage" redirect="false" />
+			<forward name="batchOut"
+				path="/stock/stockOutMgr.do?method=batchOut" redirect="false" />
+		</action>
+		<!-- add at 2011-10-20 reapeal by packId-->
+		<action path="/stock/stockOutBaleSure"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.StockOutSureAction"
+			name="stockOutBaleSureForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="viewbillreload"
+				path="stock.stockoutsure.viewbill" redirect="false" />
+		</action>
+		<!-- add by tianliang 0227 -->
+		<action path="/stock/stockOutSure"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.StockOutSureAction"
+			name="stockOutSureForm" scope="request"
+			input="stock.stockoutsure.stockoutsurelist" unknown="false"
+			validate="false">
+			<forward name="StockOutSureList"
+				path="stock.stockoutsure.stockoutsurelist" redirect="false" />
+			<forward name="StockOutCheckList"
+				path="stock.stockoutsure.stockoutchecklist" redirect="false" />
+			<forward name="StockOutTrackList"
+				path="stock.stockoutsure.stockouttracklist" redirect="false" />
+			<forward name="StockOutSureDel"
+				path="stock.stockoutsure.stockoutsuredel" redirect="false" />
+			<forward name="StockOutCheckDel"
+				path="stock.stockoutsure.stockoutcheckdel" redirect="false" />
+			<forward name="viewbill" path="stock.stockoutsure.viewbill"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/transport/transShipLoad"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransShipLoadAction"
+			name="transShipLoadForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transShipLoad"
+				path="transport.ship.transShipLoad" redirect="false" />
+			<!-- 2013/1/7 add by tangaj about TPL_TRANS_SHIP_M start -->
+			<forward name="transShipLoadM"
+				path="transport.ship.transShipLoadM" redirect="false" />
+			<!-- 2013/1/7 add by tangaj about TPL_TRANS_SHIP_M end -->
+			<forward name="viewTransShipLoad"
+				path="transport.ship.viewTransShipLoad" redirect="false" />
+			<forward name="detailTransShipLoad"
+				path="transport.ship.detailTransShipLoad" redirect="false" />
+			<forward name="detailTransPackLoad"
+				path="transport.ship.detailTransPackLoad" redirect="false" />
+			<forward name="validateTransShip"
+				path="transport.ship.validateTransShip" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+			<forward name="TransShipLeaveOut"
+				path="transport.ship.TransShipLeaveOut" redirect="false" />
+
+			<forward name="TransShipLoadOut"
+				path="transport.ship.TransShipLoadOut" redirect="false" />
+			<forward name="transShipPrint"
+				path="transport.ship.transShipPrint" redirect="false" />
+				
+			<!-- add by ranqiguang  20180911 -->
+			<forward name="transShipPackCurrentExportView"
+				path="transport.ship.transShipPackCurrentExportView" redirect="false" />
+			<!-- add by ranqiguang  20180911 -->
+			<forward name="shipLoadPackCurrentInfo"
+				path="transport.ship.shipLoadPackCurrentInfo" redirect="false" />
+		</action>
+		<action path="/transport/contractDetail"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.ContractDetailAction"
+			name="transShipPlanForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="contractDetail"
+				path="transport.ship.contractDetail" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/transport/transChooUpload"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransChooUploadAction"
+			name="transSeqForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transChooUpload"
+				path="transport.transChooUpload.transChooUpload" redirect="false" />
+			<forward name="queryTransChooUpload"
+				path="transport.transChooUpload.queryTransChooUpload"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/fee/stockInvoiceMgr"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.action.StockInvoiceMgrAction"
+			name="stockFeeInvoiceForm" scope="request"
+			input="/3pl/fee/StockInvoiceManageInq.jsp" unknown="false"
+			validate="false">
+			<forward name="viewAccountDetail"
+				path="/3pl/fee/StockFeeDetail.jsp" redirect="false" />
+			<forward name="viewInvoiceDetail"
+				path="/3pl/fee/InvoiceDetail.jsp" redirect="false" />
+			<forward name="viewInsuranceInvoiceDetail"
+				path="/3pl/fee/insuranceInvoiceDetail.jsp" redirect="false" />
+			<forward name="viewInvoiceSplit"
+				path="/3pl/fee/InvoiceSplit.jsp" redirect="false" />
+			<forward name="StockFeeMgr"
+				path="fee.stockfeemgr.querystockfeemgr" redirect="false" />
+			<forward name="StockFeeSearch"
+				path="fee.stockfeemgr.querystockfeesearch" redirect="false" />
+			<forward name="addinvoice" path="fee.stockfeemgr.addinvoice"
+				redirect="false" />
+			<forward name="toaddinvoice"
+				path="fee.stockfeemgr.toaddinvoice" redirect="false" />
+			<forward name="updateinvoice"
+				path="fee.stockfeemgr.updateinvoice" redirect="false" />
+			<forward name="toupdateinvoice"
+				path="fee.stockfeemgr.toupdateinvoice" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+			<forward name="transfeeinvoicelist"
+				path="fee.stockfeemgr.transfeeinvoicelist" redirect="false" />
+		</action>
+		<action path="/stock/stockInItem"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.StockInItemAction"
+			name="stockInItemForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="insertStockInItem"
+				path="stock.stockInItem.insertStockInItem" redirect="false" />
+			<forward name="insertStockInItemWLS"
+				path="stock.stockInItem.insertStockInItemWLS" redirect="false" />
+			<forward name="updateStockInPlanList"
+				path="stock.StockInPlan.updateStockInPlanList" redirect="false" />
+			<forward name="updateStockInPlanListWLS"
+				path="stock.StockInPlan.updateStockInPlanListWLS" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/stock/stockOutPlan"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.StockOutPlanAction"
+			name="stockOutPlanForm" scope="request"
+			input="stock.stockoutplan.stockoutplanlist" unknown="false"
+			validate="false">
+			<forward name="StockOutPlanList"
+				path="stock.stockoutplan.stockoutplanlist" redirect="false" />
+			<forward name="StockOutPlanArriveName"
+				path="stock.stockoutplan.stockoutplanarrivename" redirect="false" />
+			<forward name="StockOutPlanDel"
+				path="stock.stockoutplan.stockoutplandel" redirect="false" />
+			<forward name="StockOutPlanNew"
+				path="stock.stockoutplan.stockoutplanalt" redirect="false" />
+			<forward name="StockOutPlanAlt"
+				path="stock.stockoutplan.stockoutplanalt" redirect="false" />
+			<forward name="StockOutPlanView"
+				path="stock.stockoutplan.stockoutplanview" redirect="false" />
+			<forward name="toStockOutPlanAdd"
+				path="stock.stockoutplan.tostockoutplanadd" redirect="false" />
+			<forward name="StockOutPlanUpdate"
+				path="stock.stockoutplan.stockoutplanupdate" redirect="false" />
+			<forward name="topackadd"
+				path="stock.stockoutplan.topackadd" redirect="false" />
+			<forward name="topackdetailforupdate"
+				path="stock.stockoutplan.topackdetailforupdate" redirect="false" />
+			<forward name="updatepackdetail"
+				path="stock.stockoutplan.updatepackdetail" redirect="false" />
+			<forward name="viewpackdetail"
+				path="stock.stockoutplan.viewpackdetail" redirect="false" />
+			<forward name="viewdetail"
+				path="stock.stockoutplan.stockoutplanviewdetail" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/transport/shipAbilityPredict"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.ShipAbilityPredictAction"
+			name="shipInqForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="shipAbilityPredict"
+				path="transport.ship.shipAbilityPredict" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/stock/stockSearch"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.StockSearchAction"
+			name="stockSearchForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="queryStock"
+				path="stock.stockSearch.queryStock" redirect="false" />
+			<forward name="viewPackId"
+				path="stock.stockSearch.viewPackId" redirect="false" />
+			<!-- add by llk 2012/7/31 -->
+			<forward name="storePackMgrInfo"
+				path="stock.stockSearch.storePackMgrInfo" redirect="false" />
+			<forward name="searchStockForMove"
+				path="stock.stockSearch.searchStockForMove" redirect="false" />
+			<!-- end by llk -->
+			<forward name="TakeStock" path="stock.stockSearch.TakeStock"
+				redirect="false" />
+			<forward name="queryStockForAdmin"
+				path="stock.stockSearch.queryStockForAdmin" redirect="false" />
+			<forward name="insertStockForAdmin"
+				path="stock.stockSearch.insertStockForAdmin" redirect="false" />
+			<forward name="altStockForAdmin"
+				path="stock.stockSearch.altStockForAdmin" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+			<!-- add by WEN 2013/07/30 厂外库webService库存查询 queryStockByWebservice -->
+			<forward name="stockOtherPage"
+				path="stock.stockSearch.queryStoreOther" redirect="false" />
+			<forward name="queryStoreOther"
+				path="stock.stockSearch.queryStoreOther" redirect="false" />
+			<!-- end by RT -->
+		</action>
+		<action path="/transport/transShipTrace"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransShipTraceAction"
+			name="transShipTraceForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transShipTraceMgr"
+				path="transport.transShipTrace.transShipTraceMgr" redirect="false" />
+			<forward name="transShipTraceInfo"
+				path="transport.transShipTrace.transShipTraceInfo" redirect="false" />
+			<forward name="transShipTraceNew"
+				path="transport.transShipTrace.transShipTraceNew" redirect="false" />
+			<forward name="transShipTraceUpdate"
+				path="transport.transShipTrace.transShipTraceUpdate"
+				redirect="false" />
+			<forward name="transShipTraceShow"
+				path="transport.transShipTrace.transShipTraceShow" redirect="false" />
+			<!-- shipTranceMaintain add by tangaj 2013/3/18 start -->
+			<forward name="shipTranceMaintain"
+				path="transport.transShipTrace.shipTranceMaintain" redirect="false" />
+			<forward name="shipDynaExport"
+				path="transport.transShipTrace.shipDynaExport" redirect="false" />
+			<!-- shipTranceMaintain add by tangaj 2013/3/18 end -->
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/stock/StockInConfirm"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.StockInConfirmAction"
+			name="stockInConfirmForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="listInStockBill"
+				path="stock.stockconfirm.listinstockbill" redirect="false" />
+			<forward name="viewPutinId"
+				path="stock.stockconfirm.instorebillview" redirect="false" />
+			<forward name="viewPackId"
+				path="stock.stockconfirm.viewPackId" redirect="false" />
+			<forward name="StockInList"
+				path="stock.stockconfirm.listinstockbill" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/summary"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.SummaryAction"
+			name="summary" scope="request" input="/3pl/supplier/summary.jsp"
+			unknown="false" validate="false">
+			<forward name="success"
+				path="supplier.TransportInq.uploadSuccess" redirect="false" />
+			<forward name="fail" path="supplier.TransportInq.uploadFail"
+				redirect="false" />
+		</action>
+		<action path="/transport/transChooPlan"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransChooPlanAction"
+			name="transPlanForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transPlanFeeList"
+				path="transport.transPlanFeeList" redirect="false" />
+			<forward name="transChooPlanInq"
+				path="transport.transChooPlan.transChooPlanInq" redirect="false" />
+			<forward name="transChooPlanNew"
+				path="transport.transChooPlan.transChooPlanNew" redirect="false" />
+			<forward name="transChooPlanAlt"
+				path="transport.transChooPlan.transChooPlanAlt" redirect="false" />
+			<forward name="transChooPlanView"
+				path="/3pl/transport/TransChooPlanView.jsp" redirect="false" />
+			<forward name="truckPlanView"
+				path="/3pl/transport/truckPlanView.jsp" redirect="false" />
+			<forward name="queryTransPlan"
+				path="transport.transChooPlan.queryTransPlan" redirect="false" />
+			<forward name="transChooPlanPartUpload"
+				path="transport.transChooPlan.transChooPlanPartUpload"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/base/ownerInfo"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.OwnerInfoAction"
+			name="ownerInfoForm" scope="request"
+			input="/3pl/base/OwnerInfoInq.jsp" unknown="false"
+			validate="false">
+			<forward name="OwnerInfoInq"
+				path="base.onwerinfo.queryonwerinfolist" redirect="false" />
+			<forward name="OwnerInfoNew"
+				path="base.onwerinfo.insertonwerinfo" redirect="false" />
+			<forward name="OwnerInfoAlt"
+				path="base.onwerinfo.updateonwerinfo" redirect="false" />
+			<forward name="OwnerInfoDel"
+				path="base.onwerinfo.delonwerinfo" redirect="false" />
+			<forward name="OwnerInfoView"
+				path="base.onwerinfo.viewonwerinfo" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/transport/transShipResult"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransShipResult"
+			name="transShipResultForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transShipResult"
+				path="transport.ship.transShipResult" redirect="false" />
+			<forward name="viewTransShipResult"
+				path="transport.ship.viewTransShipResult" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+			<!-- 2013/1/14 add by tangaj about genRealFeeVal start -->
+			<forward name="genRealFeeVal"
+				path="fee.transfeeinvoicecreate.genRealFeeVal" redirect="false" />
+			<!-- 2013/1/14 add by tangaj about genRealFeeVal end -->
+		</action>
+		<action path="/fee/transFeeInvoiceGenerate"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.action.TransFeeInvoiceGenerateAction"
+			name="realFeeForm" scope="request" input="/3pl/fee/InvoiceCreate.jsp"
+			unknown="false" validate="false">
+			<forward name="tplUintContranst"
+				path="fee.transfeeinvoicecreate.geninvoicedirectSellingoneshiplist.tplUintContranst"
+				redirect="false" />
+
+
+			<!-- add by tangwei -->
+			<forward name="genInvoiceDirectSellingOneShipList"
+				path="fee.transfeeinvoicecreate.geninvoicedirectSellingoneshiplist"
+				redirect="false" />
+
+			<forward name="TransFeeInvoiceCreate"
+				path="fee.transfeeinvoicecreate.transfeeinvoicecreatelist"
+				redirect="false" />
+			<forward name="viewInvoiceInfo"
+				path="fee.transfeeinvoicecreate.viewinvoiceinfo" redirect="false" />
+			<forward name="genInvoiceOneShipList"
+				path="fee.transfeeinvoicecreate.geninvoiceoneshiplist"
+				redirect="false" />
+			<forward name="settleTrack" path="/3pl/fee/settle_track.jsp"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/transport/managePack"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.ManagePackAction"
+			name="storePackNew" scope="request" unknown="false"
+			validate="false">
+			<forward name="viewPackInfo"
+				path="transport.ship.viewPackInfo" redirect="false" />
+			<forward name="createPackPage"
+				path="transport.ship.createPackPage" redirect="false" />
+			<forward name="PackMgr" path="transport.ship.PackMgr"
+				redirect="false" />
+			<forward name="altPackPage"
+				path="transport.ship.altPackPage" redirect="false" />
+			<forward name="altTransShipPlanPage"
+				path="transport.ship.altTransShipPlanPage" redirect="false" />
+			<forward name="importPacksPage"
+				path="transport.ship.importPacksPage" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/transport/transChooLoad"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransChooLoadAction"
+			name="transSeqForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transChooLoad"
+				path="transport.transChooLoad.transChooLoad" redirect="false" />
+			<forward name="transChoobatchLoad"
+				path="transport.transChooLoad.transChoobatchLoad" redirect="false" />
+			<forward name="transChooUploadDetail"
+				path="transport.transChooLoad.transChooUploadDetail"
+				redirect="false" />
+			<forward name="queryTransChooSeq"
+				path="transport.transChooLoad.queryTransChooSeq" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/transport/transChooResult"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransChooResultAction"
+			name="transSeqForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transChooResult"
+				path="transport.transChooResult.transChooResult" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/base/FinalUser"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.FinalUserAction"
+			name="finalUserForm" scope="request"
+			input="base.finaluserinq.listfinaluser" unknown="false"
+			validate="false">
+			<forward name="listfinaluser"
+				path="base.finaluserinq.listfinaluser" redirect="false" />
+			<forward name="toaddfinaluser"
+				path="base.finaluserinq.toaddfinaluser" redirect="false" />
+			<forward name="altfinaluser"
+				path="base.finaluserinq.updatefinaluser" redirect="false" />
+			<forward name="viewfinaluser"
+				path="base.finaluserinq.viewfinaluser" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/fee/insurancePickInq"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.action.InsurancePickInqAction"
+			name="insuranceManageForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="insuranceShipManagePage"
+				path="fee.transport.insurance.ship.insuranceShipManagePage"
+				redirect="false" />
+
+			<forward name="insurancePickInqPage"
+				path="fee.transport.insurance.ship.insurancePickInqPage"
+				redirect="false" />
+			<forward name="insurancePreviewPage"
+				path="fee.transport.insurance.ship.insurancePreviewPage"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/stock/stockAdjust"
+			type="com.baosight.baosteel.bli.tpl.stock.struts.action.StockAdjustAction"
+			name="stockAdjustForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="storeAdjustMgr"
+				path="stock.stockAdjust.storeAdjustMgr" redirect="false" />
+			<forward name="storeAdjustPlanEdit"
+				path="stock.stockAdjust.storeAdjustPlanEdit" redirect="false" />
+			<forward name="storeAdjustPlanAlt"
+				path="stock.stockAdjust.storeAdjustPlanAlt" redirect="false" />
+			<forward name="storeAdjustPlanView"
+				path="stock.stockAdjust.storeAdjustPlanView" redirect="false" />
+			<forward name="queryStockAdjust"
+				path="stock.stockAdjust.queryStockAdjust" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/base/tplTransSeq"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.TransSeqAction"
+			name="transSeqForm" scope="request" unknown="false"
+			validate="false">
+
+			<forward name="shipMgr" path="base.tplTransSeq.shipMgr"
+				redirect="false" />
+			<forward name="shipManager"
+				path="base.tplTransSeq.shipManager" redirect="false" />
+			<forward name="shipNew" path="base.tplTransSeq.shipNew"
+				redirect="false" />
+			<forward name="shipAlt" path="base.tplTransSeq.shipAlt"
+				redirect="false" />
+			<forward name="shipDetail"
+				path="base.tplTransSeq.shipDetail" redirect="false" />
+			<forward name="queryTransSeq"
+				path="base.tplTransSeq.queryTransSeq" redirect="false" />
+			<forward name="alterShipPhone"
+				path="base.tplTransSeq.alterShipPhone" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/carAction"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.CarAction"
+			name="carInqForm" scope="request" unknown="false" validate="false">
+			<forward name="listcarinq"
+				path="resource.carmanage.listcarinq" redirect="false" />
+			<forward name="addcarinq"
+				path="resource.carmanage.addcarinq" redirect="false" />
+			<forward name="viewcarinq"
+				path="resource.carmanage.viewcarinq" redirect="false" />
+			<forward name="truckInfoAltNew"
+				path="resource.carmanage.truckInfoAltNew" redirect="false" />
+			<forward name="carReport"
+				path="resource.carmanage.carReport" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/base/BreedMgr"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.ProductAction"
+			name="productForm" scope="request" input="base.breed.listproduct"
+			unknown="false" validate="false">
+			<forward name="listproduct" path="base.breed.listproduct"
+				redirect="false" />
+			<forward name="updateproduct"
+				path="base.breed.updateproduct" redirect="false" />
+			<forward name="toaddproduct" path="base.breed.toaddproduct"
+				redirect="false" />
+			<forward name="viewproduct" path="base.breed.viewproduct"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+
+		<!-- tplUnitManageAction Start Add By tangaj 20110811 -->
+		<action path="/base/tplUnitManageAction"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.TplUnitManageAction"
+			name="tplUnitManageForm" scope="request"
+			input="base.tplunitmanage.listtplunitmanage" unknown="false"
+			validate="false">
+			<forward name="listtplunitmanage"
+				path="base.tplunitmanage.listtplunitmanage">
+			</forward>
+			<forward name="viewtplunitmanage"
+				path="base.tplunitmanage.viewtplunitmanage">
+			</forward>
+			<forward name="toaddtplunitmanage"
+				path="base.tplunitmanage.toaddtplunitmanage">
+			</forward>
+			<forward name="updatetplunitmanage"
+				path="base.tplunitmanage.updatetplunitmanage">
+			</forward>
+		</action>
+		<!-- tplUnitManageAction End Add By tangaj 20110811 -->
+
+		<action path="/sessionBound"
+			type="com.baosight.baosteel.marketing.fds.facade.action.NotifySessionBoundAction"
+			validate="false">
+			<forward name="success" path="/pendingRequest.jsp"
+				redirect="false" />
+		</action>
+
+		<action path="/logout"
+			type="com.baosight.baosteel.marketing.fds.facade.action.LogoutAction"
+			validate="false" />
+
+		<action path="/check" name="CheckMessageForm"
+			type="com.baosight.common.message.checkmessage.CheckMessageAction"
+			scope="request" validate="false" input="/checkMessage.jsp">
+			<forward path="/result.jsp" name="success" />
+
+		</action>
+
+		<action path="/sendCheck" name="SendMessageForm"
+			type="com.baosight.common.message.checkmessage.SendMessageAction"
+			scope="request" validate="false" input="/sendMessage.jsp">
+			<forward path="/result.jsp" name="success" />
+			<forward path="/composerResult.jsp" name="composerSuccess" />
+
+		</action>
+
+		<!-- ePick begin add by zhengfei 20080222-->
+		<action path="/ePick/ePickManage"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.action.EPickAction"
+			name="ePickForm" scope="request" input="ePick.manage.list"
+			unknown="false" validate="false">
+			<forward name="ePickBatchManageList"
+				path="ePick.batchmanage.list" redirect="false" />
+			<forward name="ePickManageList" path="ePick.manage.list"
+				redirect="false" />
+			<forward name="preview" path="ePick.manage.printView"
+				redirect="false" />
+			<forward name="print" path="ePick.manage.print"
+				redirect="false" />
+			<forward name="printBatch" path="ePick.manage.printBatch"
+				redirect="false">
+			</forward>
+		</action>
+		<!-- ePick begin add by zhengfei 20080222-->
+
+		<!-- run_manage begin add by tianliang 20080410-->
+		<action path="/run/statMenu"
+			type="com.baosight.baosteel.bli.tpl.run.struts.action.StatMenuAction"
+			name="statMenuForm" scope="request" input="/3pl/run/stat_menu.jsp"
+			unknown="false" validate="false">
+			<forward name="stat_menu" path="/3pl/run/stat_menu.jsp"
+				redirect="false" />
+			<forward name="down_excel" path="/stat_menu.excel"
+				redirect="false" />
+		</action>
+
+		<action path="/run/statPlan"
+			type="com.baosight.baosteel.bli.tpl.run.struts.action.StatPlanAction"
+			name="statPlanForm" scope="request" input="/3pl/run/stat_plan.jsp"
+			unknown="false" validate="false">
+			<forward name="stat_plan" path="/3pl/run/stat_plan.jsp"
+				redirect="false" />
+			<forward name="down_excel" path="/stat_plan.excel"
+				redirect="false" />
+		</action>
+
+		<action path="/run/statStock"
+			type="com.baosight.baosteel.bli.tpl.run.struts.action.StatStockAction"
+			name="statStockForm" scope="request" input="/3pl/run/stat_stock.jsp"
+			unknown="false" validate="false">
+			<forward name="stat_stock" path="/3pl/run/stat_stock.jsp"
+				redirect="false" />
+			<forward name="ReadyBackList" path="maintain.stockReadyBack.stockReadyBackList"
+				redirect="false" />
+			<forward name="down_excel" path="/stat_stock.excel"
+				redirect="false" />
+		</action>
+
+		<action path="/run/statPick"
+			type="com.baosight.baosteel.bli.tpl.run.struts.action.StatPickAction"
+			name="statPickForm" scope="request" input="/3pl/run/stat_pick.jsp"
+			unknown="false" validate="false">
+			<forward name="stat_pick" path="/3pl/run/stat_pick.jsp"
+				redirect="false" />
+			<forward name="down_excel" path="/stat_pick.excel"
+				redirect="false" />
+		</action>
+
+		<action path="/run/statInvoice"
+			type="com.baosight.baosteel.bli.tpl.run.struts.action.StatInvoiceAction"
+			name="statInvoiceForm" scope="request"
+			input="/3pl/run/invoice_list.jsp" unknown="false" validate="false">
+			<forward name="invoice_list"
+				path="/3pl/run/invoice_list.jsp" redirect="false" />
+
+			<forward name="stat_invoice_count"
+				path="/3pl/run/stat_invoice_count.jsp" redirect="false" />
+			<forward name="down_excel" path="/stat_invoice.excel"
+				redirect="false" />
+		</action>
+
+		<action path="/run/statInvoice2FeeRate"
+			type="com.baosight.baosteel.bli.tpl.run.struts.action.StatInvoiceAction"
+			name="statInvoice2FeeRateForm" scope="request"
+			input="/3pl/run/stat_invoice_2_fee_rate.jsp" unknown="false"
+			validate="false">
+			<forward name="stat_invoice_2_fee_rate"
+				path="/3pl/run/stat_invoice_2_fee_rate.jsp" redirect="false" />
+			<forward name="down_excel" path="/stat_invoice.excel"
+				redirect="false" />
+		</action>
+
+		<action path="/run/statModule"
+			type="com.baosight.baosteel.bli.tpl.run.struts.action.StatModuleAction"
+			name="statModuleForm" scope="request"
+			input="/3pl/run/stat_module.jsp" unknown="false" validate="false">
+			<forward name="stat_module" path="/3pl/run/stat_module.jsp"
+				redirect="false" />
+			<forward name="down_excel" path="/stat_module.excel"
+				redirect="false" />
+		</action>
+
+		<action path="/run/statMonth"
+			type="com.baosight.baosteel.bli.tpl.run.struts.action.StatMonthAction"
+			name="statMonthForm" scope="request" input="/3pl/run/stat_month.jsp"
+			unknown="false" validate="false">
+			<forward name="stat_month" path="/3pl/run/stat_month.jsp"
+				redirect="false" />
+			<forward name="down_excel" path="/stat_month.excel"
+				redirect="false" />
+			<forward name="stat_epick" path="/3pl/run/stat_epick.jsp"
+				redirect="false" />
+			<forward name="down_epick_excel" path="/stat_epick.excel"
+				redirect="false" />
+		</action>
+
+		<action path="/run/statMonthDetail"
+			type="com.baosight.baosteel.bli.tpl.run.struts.action.StatMonthDetailAction"
+			name="statMonthDetailForm" scope="request"
+			input="/3pl/run/stat_month_detail.jsp" unknown="false"
+			validate="false">
+			<forward name="stat_month_detail"
+				path="/3pl/run/stat_month_detail.jsp" redirect="false" />
+			<forward name="down_excel" path="/stat_month_detail.excel"
+				redirect="false" />
+		</action>
+
+		<action path="/run/statPickByDate"
+			type="com.baosight.baosteel.bli.tpl.run.struts.action.StatPickByDateAction"
+			name="statPickByDateForm" scope="request"
+			input="/3pl/run/stat_pick_by_date.jsp" unknown="false"
+			validate="false">
+			<forward name="stat_pick_by_date"
+				path="/3pl/run/stat_pick_by_date.jsp" redirect="false" />
+			<forward name="down_excel" path="/stat_pick_by_date.excel"
+				redirect="false" />
+		</action>
+
+		<action path="/run/statDisPick"
+			type="com.baosight.baosteel.bli.tpl.run.struts.action.StatDisPickAction"
+			name="statDisPickForm" scope="request"
+			input="/3pl/run/stat_dispick.jsp" unknown="false" validate="false">
+			<forward name="stat_dispick"
+				path="/3pl/run/stat_dispick.jsp" redirect="false" />
+			<forward name="down_excel" path="/stat_dispick.excel"
+				redirect="false" />
+		</action>
+		<!-- run_manage end add by tianliang 20080410-->
+
+		<!-- epick start add by tianliang 20080722-->
+		<action path="/base/epickPromisee"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.action.EpickPromiseeAction"
+			name="epickPromiseeForm" scope="request"
+			input="/3pl/ePick/epick_promisee_query.jsp" unknown="false"
+			validate="false">
+			<forward name="epick_promisee_query"
+				path="/3pl/ePick/epick_promisee_query.jsp" redirect="false" />
+			<forward name="epick_promisee_add"
+				path="/3pl/ePick/epick_promisee_add.jsp" redirect="false" />
+			<forward name="epick_promisee_operate"
+				path="/3pl/ePick/epick_promisee_operate.jsp" redirect="false" />
+			<forward name="down_excel" path="/stat_dispick.excel"
+				redirect="false" />
+		</action>
+
+		<action path="/base/epickChapter"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.action.EpickChapterAction"
+			name="epickChapterForm" scope="request"
+			input="/3pl/ePick/epick_chapter_query.jsp" unknown="false"
+			validate="false">
+			<forward name="epick_chapter_query"
+				path="/3pl/ePick/epick_chapter_query.jsp" redirect="false" />
+			<forward name="epick_chapter_add"
+				path="/3pl/ePick/epick_chapter_add.jsp" redirect="false" />
+			<forward name="epick_chapter_operate"
+				path="/3pl/ePick/epick_chapter_operate.jsp" redirect="false" />
+		</action>
+
+		<action path="/base/epickLaw"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.action.EpickLawAction"
+			name="epickLawForm" scope="request"
+			input="/3pl/ePick/epick_chapter_query.jsp" unknown="false"
+			validate="false">
+			<forward name="epick_law_query"
+				path="/3pl/ePick/epick_law_query.jsp" redirect="false" />
+			<forward name="epick_law_add"
+				path="/3pl/ePick/epick_law_add.jsp" redirect="false" />
+			<forward name="epick_law_operate"
+				path="/3pl/ePick/epick_law_operate.jsp" redirect="false" />
+		</action>
+
+		<action path="/base/epickWare"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.action.EpickWareAction"
+			name="epickWareForm" scope="request"
+			input="/3pl/ePick/epick_ware_query.jsp" unknown="false"
+			validate="false">
+			<forward name="epick_ware_query"
+				path="/3pl/ePick/epick_ware_query.jsp" redirect="false" />
+			<forward name="epick_ware_add"
+				path="/3pl/ePick/epick_ware_add.jsp" redirect="false" />
+			<forward name="epick_ware_operate"
+				path="/3pl/ePick/epick_ware_operate.jsp" redirect="false" />
+		</action>
+
+		<action path="/base/epickManage"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.action.EpickManageAction"
+			name="epickManageForm" scope="request"
+			input="/3pl/ePick/epick_manage_query.jsp" unknown="false"
+			validate="false">
+			<forward name="epick_manage_query"
+				path="/3pl/ePick/epick_manage_query.jsp" redirect="false" />
+		</action>
+		<!-- epick end add by tianliang 20080722-->
+
+
+		<!-- 进厂证管理  begin  add by yesimin 20150119-->
+		<action path="/entry/entryPermit"
+			type="com.baosight.baosteel.bli.tpl.entry.struts.action.EntryPermitAction"
+			name="EntryPermitForm" input="/3pl/entry/entryPermitManage.jsp" scope="request" unknown="false"
+			validate="false">
+			<forward name="entryPermitManage"
+				path="/3pl/entry/entryPermitManage.jsp" redirect="false" />
+			<forward name="entryPermitAdd"
+				path="/3pl/entry/entryPermitAdd.jsp" redirect="false" />
+			<forward name="entryPermitDetail"
+				path="/3pl/entry/entryPermitDetail.jsp" redirect="false" />
+			<forward name="entryPermitUpdate"
+				path="/3pl/entry/entryPermitUpdate.jsp" redirect="false" />
+			<forward name="entryPermitAddCar"
+				path="/3pl/entry/entryPermitAddCar.jsp" redirect="false" />
+			<forward name="entryPermitAuditList"
+				path="/3pl/entry/entryPermitAuditList.jsp" redirect="false" />
+			<forward name="entryPermitAudit"
+				path="/3pl/entry/entryPermitAudit.jsp" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		
+		<action path="/entry/infocard"
+			type="com.baosight.baosteel.bli.tpl.entry.struts.action.InfocardAction"
+			name="InfocardForm" input="/3pl/entry/InfocardManage.jsp" scope="request" unknown="false"
+			validate="false">
+			<forward name="infocardManage"
+				path="/3pl/entry/infocardManage.jsp" redirect="false" />
+			<forward name="infocardAdd"
+				path="/3pl/entry/infocardAdd.jsp" redirect="false" />
+			<forward name="infocardDetail"
+				path="/3pl/entry/infocardDetail.jsp" redirect="false" />
+			<forward name="infocardUpdate"
+				path="/3pl/entry/infocardUpdate.jsp" redirect="false" />
+			<forward name="infocardAddDriver"
+				path="/3pl/entry/infocardAddDriver.jsp" redirect="false" />
+			<forward name="infocardAudit"
+				path="/3pl/entry/infocardAudit.jsp" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<!-- 进厂证管理  end add by yesimin 20150119-->
+
+
+
+
+		<!--maintain begin add by huangjm 20080903-->
+		<action path="/maintain/planfee"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.PlanfeeAction"
+			name="planfeeUpdataInvtitleForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="planfeeUpdateInvtitle"
+				path="maintain.planfeeUpdate" redirect="false" />
+		</action>
+		<!--maintain end add by huangjm 20080903-->
+		<!-- warehouseAutoManage begin add by zhangpeng 20080903-->
+		<action path="/base/warehouseAutoManage"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.WarehouseAutoManageAction"
+			name="warehouseAutoManageForm" scope="request"
+			input="/3pl/base/WarehouseAutoManage.jsp" unknown="false"
+			validate="false">
+			<forward name="base_warehouseAutoManage_query"
+				path="base.warehouseAutoManage.query" redirect="false" />
+			<forward name="base_warehouseAutoManage_add"
+				path="base.warehouseAutoManage.add" redirect="false" />
+			<forward name="base_warehouseAutoManage_alt"
+				path="base.warehouseAutoManage.alt" redirect="false" />
+		</action>
+		<!-- warehouseAutoManage end add by zhangpeng 20080903-->
+		<!-- FeeUpdateRecode begin zhangpeng 20080909 -->
+		<action path="/maintain/feeUpdateRecode"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.FeeUpdateRecodeAction"
+			name="feeUpdateRecodeForm" scope="request"
+			input="/3pl/maintain/FeeUpdateRecodeUpload.jsp" unknown="false"
+			validate="false">
+			<forward name="maintain_feeUpdateRecode_upload"
+				path="maintain.feeUpdateRecode.upload" redirect="false" />
+			<forward name="maintain_feeUpdateRecode_query"
+				path="maintain.feeUpdateRecode.query" redirect="false" />
+
+		</action>
+		<!-- FeeUpdateRecode end zhangpeng 20080909 -->
+		<!-- UupBusiness and InsuranceGenRule begin zhangpeng 20080925 -->
+		<action path="/maintain/uupBusiness"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.UupBusinessAction"
+			name="uupBusinessForm" scope="request"
+			input="/3pl/maintain/UupBusinessQuery.jsp" unknown="false"
+			validate="false">
+			<forward name="maintain_uupBusiness_new"
+				path="maintain.uupBusiness.new" redirect="false" />
+			<forward name="maintain_uupBusiness_alt"
+				path="maintain.uupBusiness.alt" redirect="false" />
+			<forward name="maintain_uupBusiness_query"
+				path="maintain.uupBusiness.query" redirect="false" />
+		</action>
+
+		<action path="/maintain/insuranceGenRule"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.InsuranceGenRuleAction"
+			name="insuranceGenRuleForm" scope="request"
+			input="/3pl/maintain/InsuranceGenRuleQuery.jsp" unknown="false"
+			validate="false">
+			<forward name="maintain_insuranceGenRule_new"
+				path="maintain.insuranceGenRule.new" redirect="false" />
+			<forward name="maintain_insuranceGenRule_alt"
+				path="maintain.insuranceGenRule.alt" redirect="false" />
+			<forward name="maintain_insuranceGenRule_query"
+				path="maintain.insuranceGenRule.query" redirect="false" />
+
+		</action>
+		<!-- UupBusiness and InsuranceGenRule end zhangpeng 20080925 -->
+		<!-- begin add by huangjm 20080918-->
+		<action path="/maintain/deletePlan"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.DeletePlanAction"
+			name="deletePlanForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="deletePlan" path="maintain.deletePlan"
+				redirect="false" />
+		</action>
+		<action path="/maintain/procedure"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.ProcedureAction"
+			name="procedureForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="procedure" path="maintain.procedure"
+				redirect="false" />
+		</action>
+		<action path="/maintain/transFeeInvoice"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.TransFeeInvoiceAction"
+			name="transFeeInvoiceForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transFeeInvoice"
+				path="maintain.transFeeInvoice" redirect="false" />
+		</action>
+
+
+
+		<action path="/maintain/storageRed"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.StorageRedAction"
+			name="storeRedForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="querystorageRedPack"
+				path="maintain.querystorageRedPack" redirect="false" />
+		</action>
+		<!-- end add by wj 20080918-->
+
+		<!-- start add by huangjm 20121127-->
+
+		<action path="/maintain/MessageSend"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.MessageSendAction"
+			name="messageSendForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="messageSend" path="maintain.messageSend"
+				redirect="false" />
+		</action>
+		<!-- end add by wj 20121127-->
+
+
+		<!--
+			The following Action Class are for MenuHits Count Only. No further
+			methods Increments are allowed.
+		-->
+		<action path="/maintain/touchMenu"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.CountMenuHitsAction"
+			unknown="false" validate="true">
+			<forward name="success" path="/3pl/main.jsp"
+				redirect="false" />
+		</action>
+		<!-- Menu Hits Count Authored by Su Shengjie at 20101125 -->
+
+		<!-- begin add by wangq 20110415 -->
+		<action path="/base/eSign"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.action.ESignAction"
+			name="eSignForm" scope="request" input="/3pl/ePick/eSign.jsp"
+			unknown="false" validate="false">
+			<forward name="eSign_start" path="/3pl/ePick/eSign.jsp"
+				redirect="false" />
+			<forward name="eSign_forword"
+				path="/3pl/ePick/eSignForward.jsp" redirect="false" />
+			<forward name="agreeUpdate"
+				path="/3pl/ePick/eSignAgreeUpdate.jsp" redirect="false" />
+			<forward name="updateDetail"
+				path="/3pl/ePick/updateDetail.jsp" redirect="false" />
+		</action>
+		<!-- end add by wangq 20110415 -->
+
+		<!-- start add by wuyang 20110620 -->
+		<action path="/epick/providerEpickBillPrint"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.action.ProviderPrintAction"
+			name="epickPrintForm" scope="request"
+			input="/3pl/ePick/provider_epick_bill_print.jsp" unknown="false"
+			validate="false">
+			<forward name="epickBillPrint"
+				path="/3pl/ePick/provider_epick_bill_print.jsp" redirect="false" />
+		</action>
+		<action path="/epick/clientEpickBillPrint"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.action.ClientPrintAction"
+			name="epickPrintForm" scope="request"
+			input="/3pl/ePick/client_epick_bill_print.jsp" unknown="false"
+			validate="false">
+			<forward name="epickBillPrint"
+				path="/3pl/ePick/client_epick_bill_print.jsp" redirect="false" />
+		</action>
+		<action path="/ePick/ePickPrintManage"
+			type="com.baosight.baosteel.bli.tpl.ePick.struts.action.EPickPrintAction"
+			name="ePickForm" scope="request" input="ePick.print.manage.list"
+			unknown="false" validate="false">
+			<forward name="ePickPrintBatchManageList"
+				path="ePick.print.batchmanage.list" redirect="false" />
+			<forward name="ePickPrintManageList"
+				path="ePick.print.manage.list" redirect="false" />
+			<forward name="printPreview"
+				path="ePick.print.manage.printView" redirect="false" />
+			<forward name="billPrint" path="ePick.print.manage.print"
+				redirect="false" />
+			<forward name="billPrintBatch"
+				path="ePick.print.manage.printBatch" redirect="false">
+			</forward>
+		</action>
+		<!-- end add by wuyang 20110620 -->
+		<!--begin add by majingjing 2011-11-03  -->
+		<action path="/supplier/DriverManage"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.DriverAction"
+			name="driverForm" scope="request" unknown="false" validate="false">
+			<forward name="searchlist" path="supplier.DriverManage.list"
+				redirect="false" />
+			<forward name="driverAdd" path="supplier.DriverManage.add"
+				redirect="false" />
+			<forward name="driverEdit" path="supplier.DriverManage.edit"
+				redirect="false" />
+			<forward name="toExamine"
+				path="supplier.DriverManage.toExamine" redirect="false" />
+			<forward name="searchlistForVD"
+				path="supplier.DriverManage.listForVD" redirect="false" />
+			<forward name="searchlistForTruckDisPlan"
+				path="supplier.DriverManage.listForTruckDisPlan" redirect="false" />
+			<forward name="getTplDriverInfo"
+				path="supplier.DriverManage.getTplDriverInfo" redirect="false" />
+			<!--进厂证司机部分 begin yesimin 20150122-->
+			<forward name="getEntryList"
+				path="supplier.DriverManage.getEntryList" redirect="false" />
+			<forward name="getEntryAudit"
+				path="supplier.DriverManage.getEntryAudit" redirect="false" />
+			<forward name="driverDetail"
+				path="supplier.DriverManage.detail" redirect="false" />
+			<forward name="addEntry"
+				path="supplier.DriverManage.addEntry" redirect="false" />
+			<!--进厂证司机部分 end yesimin 20150122-->
+		</action>
+		<!--end add by majingjing 2011-11-03  -->
+		<action path="/supplier/TplHeadstockManage"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.TplHeadstockAction"
+			name="tplHeadstockForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="searchlist"
+				path="supplier.TplHeadstockManage.list" redirect="false" />
+			<forward name="tplHeadstockAdd"
+				path="supplier.TplHeadstockManage.add" redirect="false" />
+			<forward name="tplHeadstockEdit"
+				path="supplier.TplHeadstockManage.edit" redirect="false" />
+			<forward name="searchForBusNumber"
+				path="supplier.TplHeadstockManage.listForVD" redirect="false" />
+			<forward name="searchForBusNumbers"
+				path="supplier.TplHeadstockManage.listForVD1" redirect="false" />
+			<!-- add by llk 20120723 -->
+			<forward name="searchBusNumbersForTruckLoad"
+				path="supplier.TplHeadstockManage.searchBusNumbersForTruckLoad"
+				redirect="false" />
+			<!-- add by 2018 04 13 -->
+			<forward name="searchBusNumbersForTruckLoadZJ"
+				path="supplier.TplHeadstockManage.searchBusNumbersForTruckLoadZJ" redirect="false" />
+			<forward name="tplHeadstockToExamine"
+				path="supplier.TplHeadstockManage.tplHeadstockToExamine"
+				redirect="false" />
+			<forward name="tplHeadstockToSyn"
+				path="supplier.TplHeadstockManage.tplHeadstockToSyn"
+				redirect="false" />
+			<!-- end by llk 20120723 -->
+
+			<!--进厂证车头查看 begin yesimin 20150121 -->
+			<forward name="tplHeadstockDetail"
+				path="supplier.TplHeadstockManage.tplHeadstockDetail" redirect="false" />
+			<!--进厂证车头查看 end yesimin 20150121 -->
+		</action>
+		<action path="/supplier/TplTrailerManage"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.TplTrailerAction"
+			name="tplTrailerForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="searchlist"
+				path="supplier.TplTrailerManage.list" redirect="false" />
+			<forward name="tplTrailerAdd"
+				path="supplier.TplTrailerManage.add" redirect="false" />
+			<forward name="tplTrailerEdit"
+				path="supplier.TplTrailerManage.edit" redirect="false" />
+			<forward name="toExamine"
+				path="supplier.TplTrailerManage.toExamine" redirect="false" />
+			<forward name="searchlistForTrailerNumber"
+				path="supplier.TplTrailerManage.listForVD" redirect="false" />
+			<forward name="searchlistForTrailerNumbers"
+				path="supplier.TplTrailerManage.listForVD1" redirect="false" />
+			<forward name="searchTrailersForTruckLoad"
+				path="supplier.TplTrailerManage.searchTrailersForTruckLoad"
+				redirect="false" />
+			<!--进厂证挂车查看 begin yesimin 20150121 -->
+			<forward name="tplTrailerDetail"
+				path="supplier.TplTrailerManage.tplTrailerDetail" redirect="false" />
+			<!--进厂证挂车查看 end yesimin 20150121 -->
+		</action>
+		<action path="/supplier/TplVehDistributionManage"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.TplVehDistributionAction"
+			name="TplVehDistributionForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="searchlist"
+				path="supplier.TplVehDistributionManage.list" redirect="false" />
+			<forward name="tplVehDistributionAdd"
+				path="supplier.TplVehDistributionManage.add" redirect="false" />
+			<forward name="tplVehDistributionEdit"
+				path="supplier.TplVehDistributionManage.edit" redirect="false" />
+		</action>
+		<action path="/supplier/TplDestinationManage"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.TplDestinationAction"
+			name="TplDestinationForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="searchlist"
+				path="supplier.TplDestinationManage.list" redirect="false" />
+			<forward name="destinationAdd"
+				path="supplier.TplDestinationManage.add" redirect="false" />
+			<forward name="tplDestinationEdit"
+				path="supplier.TplDestinationManage.edit" redirect="false" />
+			<forward name="tplRProviderWarehouseA"
+				path="supplier.TplDestinationManage.tplRProviderWarehouseA"
+				redirect="false" />
+			<forward name="tplRProviderWarehouseB"
+				path="supplier.TplDestinationManage.tplRProviderWarehouseB"
+				redirect="false" />
+			<forward name="tplDestinationForTruckDisPlan"
+				path="supplier.TplDestinationManage.tplDestinationForTruckDisPlan"
+				redirect="false" />
+		</action>
+		<action path="/transport/transTruckDisPlan"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TruckDisPlanAction"
+			name="TruckDisPlanForm" scope="request" unknown="false" 
+			validate="false">
+			<forward name="transTruckDisPlanFirst"
+				path="transport.transTruckDisPlan.first" redirect="false" />
+			<forward name="transTruckDisPlanSecond"
+				path="transport.transTruckDisPlan.second" redirect="false" />
+			<forward name="transTruckDisPlanThird"
+				path="transport.transTruckDisPlan.third" redirect="false" />
+			<forward name="transTruckDisPlanFourth"
+				path="transport.transTruckDisPlan.fourth" redirect="false" />
+			<forward name="TruckDisPlanList"
+				path="transport.transTruckDisPlan.list" redirect="false" />
+			<forward name="transTruckDisPlanFirst" path="transport.transTruckDisPlan.first"
+				redirect="false" />
+			<forward name="flyTruckPlanFirst" path="transport.flyTruckPlan.first"
+				redirect="false" />
+			<forward name="flyPresentationTruckPlanFirst" path="transport.flyPresentationTruckPlan.first"
+				redirect="false" />
+			<forward name="transTruckDisPlanSecond" path="transport.transTruckDisPlan.second"
+				redirect="false" />
+		    <forward name="transTruckDisPlanFlySecond" path="transport.transTruckDisPlan.flySecond"
+				redirect="false" />
+			<forward name="transTruckDisPlanThird" path="transport.transTruckDisPlan.third"
+				redirect="false" />
+			<forward name="transTruckDisPlanFourth" path="transport.transTruckDisPlan.fourth"
+				redirect="false" />
+			<forward name="TruckDisPlanList" path="transport.transTruckDisPlan.list"
+				redirect="false" />
+		</action>
+		<!--end add by majingjing 2011-11-03  -->
+
+		<!--begin add by panyouyong 2012-07-16  -->
+		<action path="/transport/transTruckStatistics"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransTruckStatisticsAction"
+			name="transTruckStatisticsForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="searchTransTruckStatistics"
+				path="transport.transTruckStatistics.searchTransTruckStatistics"
+				redirect="false" />
+			<!-- add by llk 2012/09/11 -->
+			<forward name="transOnTimeStats"
+				path="transport.transTruckStatistics.transOnTimeStats"
+				redirect="false" />
+			<forward name="transSeqStats"
+				path="transport.transTruckStatistics.transSeqStats"
+				redirect="false" />
+			<forward name="transDriverSeqStats"
+				path="transport.transTruckStatistics.transDriverSeqStats"
+				redirect="false" />
+			<forward name="TruckLocationMapMain"
+				path="/3pl/transport/TruckLocationMapMain.jsp" redirect="false" />
+			<forward name="TruckLocationMapLeft"
+				path="/3pl/transport/TruckLocationMapLeft.jsp" redirect="false" />
+			<forward name="TruckLocationMapRight"
+				path="/3pl/transport/TruckLocationMapRight.jsp" redirect="false" />
+		</action>
+		<!--end add by panyouyong 2012-07-16  -->
+		<action path="/3pl/map"
+			type="com.baosight.baosteel.bli.tpl.map.struts.action.MapLocationAction"
+			name="mapForm" scope="request" unknown="false" validate="false">
+			<forward name="mapMain" path="/3pl/map/mapMain.jsp"
+				redirect="false" />
+		</action>
+
+
+		<!-- ship port fee add by wuyang20111219 -->
+		<action path="/transport/transShipPortFee"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransShipPortFeeAction"
+			name="transShipPortFeeForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transShipPortFee"
+				path="transport.ship.transShipPortFee" redirect="false" />
+			<forward name="createPortFee"
+				path="transport.ship.transCreateShipPortFee" redirect="false" />
+			<forward name="transShipPortFeeDetail"
+				path="transport.ship.transShipPortFeeDetail" redirect="false" />
+			<forward name="getTransSeq"
+				path="transport.ship.getTransSeq" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+
+		<!-- begin add by huangjm 20081201-->
+		<action path="/run/statPlanOnTime"
+			type="com.baosight.baosteel.bli.tpl.run.struts.action.StatPlanOnTimeAction"
+			name="statPlanForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="statPlanOnTime" path="run.statPlanOnTime"
+				redirect="false" />
+			<forward name="statPlanOnTimeStock"
+				path="run.statPlanOnTimeStock" redirect="false" />
+			<forward name="down_excel" path="/stat_plan_ontime.excel"
+				redirect="false" />
+		</action>
+		<action path="/maintain/transBusiness"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.TransBusinessAction"
+			name="transBusinessForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="lackStacking"
+				path="maintain.lackStackingList" redirect="false" />
+			<forward name="lackUnitPrice"
+				path="maintain.lackUnitPriceList" redirect="false" />
+		</action>
+		<!-- end add by huangjm 20081201-->
+		<!-- wuyang add by 20120210 start-->
+		<action path="/fee/invoiceLimit"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.action.InvoiceLimitAction"
+			name="invoiceLimitForm" scope="request" unknown="false"
+			validate="false" parameter="o">
+			<forward name="invoiceLimitAdd"
+				path="fee.invoiceLimit.invoiceLimitAdd" redirect="false" />
+			<forward name="invoiceLimitList"
+				path="fee.invoiceLimit.invoiceLimitList" redirect="false" />
+			<forward name="invoiceLimitAlt"
+				path="fee.invoiceLimit.invoiceLimitAlt" redirect="false" />
+			<forward name="viewTplInvoiceVatLimit"
+				path="fee.invoiceLimit.viewTplInvoiceVatLimit" redirect="false" />
+
+			<forward name="Tscsc01List"
+				path="fee.invoiceLimit.Tscsc01List" redirect="false" />
+
+		</action>
+		<action path="/fee/transFeeInsuranceMgr"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.action.TransFeeInsuranceMgrAction"
+			name="transFeeInvoiceForm" scope="request"
+			input="/3pl/fee/InsuranceManageInq.jsp" unknown="false"
+			validate="false">
+			<forward name="transFeeInsuranceMgr"
+				path="fee.transfeeinsurancdmgr.querytransfeemgr" redirect="false" />
+			<forward name="transFeeInsuranceSearch"
+				path="fee.transfeeinsurancemgr.querytransfeesearch"
+				redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+
+		<!-- action about bill chaifen -->
+		<action path="/fee/stockInvoiceSplitMgr"
+			type="com.baosight.baosteel.bli.tpl.fee.struts.action.StockInvoiceSplitMgrAction"
+			name="invoiceSplitForm" scope="request"
+			input="/3pl/fee/InvoiceSplit.jsp" unknown="false" validate="false"
+			parameter="method">
+			<forward name="viewInvoiceSplitDetail"
+				path="/3pl/fee/InvoiceSplit.jsp" redirect="false" />
+		</action>
+		<!-- bill chaifen end -->
+		<!-- wuyang add by 20120210 end-->
+
+
+
+
+		<action path="/supplier/esignBsteelComEdocsignLogin"
+			forward="/3pl/ePick/loginForward.jsp">
+		</action>
+		<action path="/ePick/password"
+			forward="/3pl/ePick/password.jsp" />
+
+
+		<!-- tangaj temp start -->
+		<action path="/supplier/TplDestinationManage"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.TplDestinationAction"
+			name="TplDestinationForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="searchlist"
+				path="supplier.TplDestinationManage.list" redirect="false" />
+			<forward name="destinationAdd"
+				path="supplier.TplDestinationManage.add" redirect="false" />
+			<forward name="tplDestinationEdit"
+				path="supplier.TplDestinationManage.edit" redirect="false" />
+			<forward name="tplRProviderWarehouseA"
+				path="supplier.TplDestinationManage.tplRProviderWarehouseA"
+				redirect="false" />
+			<forward name="tplRProviderWarehouseB"
+				path="supplier.TplDestinationManage.tplRProviderWarehouseB"
+				redirect="false" />
+			<forward name="tplDestinationForTruckDisPlan"
+				path="supplier.TplDestinationManage.tplDestinationForTruckDisPlan"
+				redirect="false" />
+		</action>
+		<!-- tangaj temp end -->
+
+		<!-- tangaj TransTruckSignMgr start -->
+		<action path="/transport/TransTruckSignMgr"
+			name="transTruckSignMgrForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransTruckSignMgrAction"
+			scope="request" unknown="false" validate="false">
+			<forward name="querySignList"
+				path="transport.TransTruckSignMgr.list" redirect="false" />
+			<forward name="queryAbnormalList"
+				path="transport.TransTruckSignMgr.abnormalList" redirect="false" />
+			<forward name="truckSignInfo"
+				path="transport.TransTruckSignMgr.truckSignInfo" redirect="false" />
+
+			<forward name="transAbnormalInfo"
+				path="transport.TransTruckSignMgr.transAbnormalInfo"
+				redirect="false" />
+
+			<forward name="transFortruckSignInfo"
+				path="transport.TransTruckSignMgr.transFortruckSignInfo"
+				redirect="false" />
+			<forward name="truckSignInfoDet"
+				path="transport.TransTruckSignMgr.truckSignInfoDet"
+				redirect="false" />
+			<forward name="querySignInfoListForRun"
+				path="transport.TransTruckSignMgr.querySignInfoListForRun"
+				redirect="false" />
+			<forward name="truckSignInfoForDis"
+				path="transport.TransTruckSignMgr.truckSignInfoForDis"
+				redirect="false" />
+		</action>
+
+
+
+		<!-- tangaj TransTruckSignMgr end -->
+		<!-- add by llk 2012/7/17 -->
+		<action path="/transport/transTruckRoadCodeMgr"
+			name="transTruckRoadCodeForm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransTruckRoadCodeAction"
+			scope="request" unknown="false" validate="false">
+			<forward name="queryRoadCodeList"
+				path="transport.TransTruckRoadCodeMgr.list" redirect="false" />
+		</action>
+
+		<!-- yaoyh TraceMgrAction -->
+		<!-- add by yyh 2013/2/27 -->
+		<action path="/base/traceMgr" name="TraceMgrForm"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.TraceMgrAction"
+			scope="request" unknown="false" validate="false">
+			<forward name="traceMgr" path="base.traceMgr.traceMgr"
+				redirect="false" />
+			<forward name="tracePointInfo"
+				path="base.traceMgr.tracePointInfo" redirect="false" />
+			<forward name="tracePointNew"
+				path="base.traceMgr.tracePointNew" redirect="false" />
+			<forward name="tracePointMap"
+				path="base.traceMgr.tracePointMap" redirect="false" />
+			<forward name="traceLineMap"
+				path="base.traceMgr.traceLineMap" redirect="false" />
+			<forward name="tracePointUpdate"
+				path="base.traceMgr.tracePointUpdate" redirect="false" />
+			<forward name="traceLineInfo"
+				path="base.traceMgr.traceLineInfo" redirect="false" />
+			<forward name="traceLineNew"
+				path="base.traceMgr.traceLineNew" redirect="false" />
+		</action>
+		<action path="/transport/transShipStatistics"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransShipStatisticsAction"
+			name="transShipStatisticsForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="shipMTotal"
+				path="transport.transShipStatistics.TransShipMTotalStatistics"
+				redirect="false" />
+			<forward name="shipMItem"
+				path="transport.transShipStatistics.TransShipMItemStatistics"
+				redirect="false" />
+
+		</action>
+		<!-- 铁运车皮管理 -->
+		<action path="/transport/transChooStatistics"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransChooStatisticsAction"
+			name="transChooStatisticsForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="chooTotal"
+				path="transport.transShipStatistics.TransChooTotalStatistics"
+				redirect="false" />
+			<forward name="chooItem"
+				path="transport.transShipStatistics.TransChooItemStatistics"
+				redirect="false" />
+
+		</action>
+		<!-- 运输计划统计 WDR 2014/04/29 -->
+		<action path="/transport/transPlanStatistics"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransShipStatisticsAction"
+			name="TransPlanStatisticsForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="TransPlanStatistics"
+				path="transport.transShipStatistics.TransPlanStatistics"
+				redirect="false" />
+
+			<forward name="TransPlanItemStatistics"
+				path="transport.transShipStatistics.TransPlanItemStatistics"
+				redirect="false" />
+		</action>
+
+		<!-- 承运商系统使用问题 ljh 2014年7月2日13:39:41 -->
+		<action path="/useproblem/Viewuseproblem"
+			type="com.baosight.baosteel.bli.tpl.userproblem.struts.action.ViewuseproblemAction"
+			name="UserProblemForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="useproblemInq"
+				path="useproblem.useproblemInq" redirect="false" />
+			<forward name="addUserProblemPage"
+				path="userproblem.ship.addUserProblemPage" redirect="false" />
+			<forward name="altUserProblemPage"
+				path="userproblem.ship.altUserProblemPage" redirect="false" />
+			<forward name="altUserProblemPageDetail"
+				path="userproblem.ship.altUserProblemPageDetail" redirect="false" />
+			<forward name="useProblemTotal"
+				path="useproblem.useProblemTotal" redirect="false" />
+			<forward name="problemViewPage"
+				path="useproblem.problemView" redirect="false" />
+
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		
+		<!--  查询，同步到宝盈通 20150816   -->
+		
+		<action path="/maintain/sendInPlan"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.SendInPlanAction"
+			name="SendInPlanForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="SendInPlanList"
+				path="maintain.sendInplan.sendInplanList" redirect="false" />
+			<forward name="viewSendInplanItem"
+				path="maintain.sendInplan.sendInplanItem" redirect="false" />
+			<forward name="toSendInplan"
+				path="maintain.sendInplan.tosendInplan" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/maintain/sendInGoods"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.SendInGoodsAction"
+			name="SendInGoodsForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="SendInGoodsList"
+				path="maintain.sendInGoods.sendInGoodsList" redirect="false" />
+			<forward name="viewSendInGoodsItem"
+				path="maintain.sendInGoods.sendInGoodsItem" redirect="false" />
+			<forward name="toSendInGoods"
+				path="maintain.sendInGoods.tosendInGoods" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/maintain/sendContract"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.SendContractAction"
+			name="SendContractForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="SendContractList"
+				path="maintain.sendContract.sendContractList" redirect="false" />
+			<forward name="viewSendContractItem"
+				path="maintain.sendContract.sendContractItem" redirect="false" />
+			<forward name="toSendContract"
+				path="maintain.sendContract.tosendContract" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+			<forward name="queryContractList"
+				path="maintain.sendContract.queryContractList" redirect="false" />
+		</action>
+		<action path="/maintain/sendLineout"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.SendLineoutAction"
+			name="SendLineoutForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="SendLineoutList"
+				path="maintain.sendLineout.sendLineoutList" redirect="false" />
+			<forward name="viewSendLineoutItem"
+				path="maintain.sendLineout.sendLineoutItem" redirect="false" />
+			<forward name="toSendLineout"
+				path="maintain.sendLineout.tosendLineout" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/maintain/sendTransPlan"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.SendTransPlanAction"
+			name="SendTransPlanForm" scope="request" unknown="false" validate="false">
+			<forward name="SendTransPlanList" path="maintain.SendTransPlan.SendTransPlanList" />
+			<forward name="ViewSendTransPlanItem" path="maintain.SendTransPlan.SendTransPlanItem" />
+		</action>
+		<action path="/maintain/sendInvoice"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.SendInvoiceAction"
+			name="SendInvoiceForm" scope="request" unknown="false" validate="false">
+			<forward name="SendInvoiceList" path="maintain.SendInvoice.SendInvoiceList" />
+			<forward name="ViewSendInvoiceItem" path="maintain.SendInvoice.ViewSendInvoiceItem" />
+		</action>
+		<action path="/maintain/sendInvoiceRed"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.SendInvoiceRedAction"
+			name="SendInvoiceRedForm" scope="request" unknown="false" validate="false">
+			<forward name="SendInvoiceRedList" path="maintain.SendInvoice.SendInvoiceRedList" />
+		</action>
+		<action path="/maintain/tplPMobileQuality"
+			type="com.baosight.baosteel.bli.tpl.maintain.struts.action.TplPMobileQualityAction"
+			name="tplPMobileQualityForm" scope="request"
+			input="/3pl/maintain/TplPMobileQualityAlt.jsp" unknown="false" validate="false">
+			<forward name="tplPMobileQuality"
+				path="maintain.tplPMobileQuality.tplPMobileQualityList" redirect="false" />
+			<forward name="tplPMobileQualityNew"
+				path="maintain.tplPMobileQuality.tplPMobileQualityNew" redirect="false" />
+			<forward name="tplPMobileQualityUpdate"
+				path="maintain.tplPMobileQuality.tplPMobileQualityUpdate" redirect="false" />
+
+		</action>
+		<action path="/entry/entryPermitZj" type="com.baosight.baosteel.bli.tpl.entry.struts.action.EntryPermitZjAction"
+			name="EntryPermitZjForm" scope="request" unknown="false" validate="false"
+			input="/3pl/entry/entryPermitZjManage.jsp">
+			<forward name="entryPermitZjManage" path="/3pl/entry/entryPermitZjManage.jsp"/>
+			<forward name="entryPermitZjTemporaryManage" path="/3pl/entry/entryPermitZjTemporaryManage.jsp"/>
+			<forward name="entryPermitZjExamine" path="/3pl/entry/entryPermitZjTemporaryExamine.jsp"/>
+			<forward name="entryPermitZjAdd" path="/3pl/entry/entryPermitZjAdd.jsp"/>
+			<forward name="entryPermitZjTemporaryAdd" path="/3pl/entry/entryPermitZjTemporaryAdd.jsp"/>
+			<!-- 湛江审核单 add ranqiguang 2019-03-07-->
+			<forward name="examineRecordNew" path="/3pl/entry/examinePermitZjTemporaryNew.jsp"/>
+		</action>
+		
+		<action path="/transport/transTrains" type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransTrainsAction"
+			name="TransTrainsForm" scope="request" unknown="false" validate="false"
+			input="/3pl/transport/TrainsTimeliness.jsp">
+			<forward name="trainsTimeliness" path="/3pl/transport/TrainsTimeliness.jsp"/>
+			<forward name="searchTrainId" path="/3pl/transport/TrainsSearchTrainId.jsp"/>
+			<forward name="trainsAccuracyRate" path="/3pl/transport/TrainsAccuracyRate.jsp"/>
+		</action>
+		<!-- 二程物流汽运管理 add wuyixuan 2016-12-1 12:40:47-->
+		<action path="/transport/transTruckPlanMtm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransTruckPlanMtmAction"
+			name="transPlanForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transCarPlanInqMtm" path="/3pl/transport/TransCarPlanInqMtm.jsp" />
+			<forward name="transPlanAllMtm" path="/3pl/transport/TransPlanAllForMtm.jsp" />
+			<forward name="transCarPlanNewPackMtm" path="/3pl/transport/TransCarPlanNewPackMtm.jsp" />
+			
+			<forward name="transCarRepealMgrMtm" path="/3pl/transport/TransCarRepealMgrMtm.jsp" />
+			<forward name="transCarPlanPartUpload" path="transport.transTruckPlan.transCarPlanPartUpload" redirect="false" />
+			<forward name="fail" path="3pl.common.error" redirect="false" />
+		</action>
+		
+			
+		<!-- 二程水运计划管理 -->
+		<!--mahukang  add  by 20161115  start-->
+        <action path="/transport/transShipPlanMtmInq"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransShipPlanMtmInqAction"
+			name="transShipPlanForm" scope="request" unknown="false" validate="false"
+			parameter="method">
+			<forward name="transShipPlanMtmInq"
+				path="/3pl/transport/TransShipPlanMtmInq.jsp" redirect="false" />
+			<forward name="transPlanPackMgr"
+				path="/3pl/transport/TransPlanPackMgr.jsp" redirect="false" />
+			<forward name="transShipPlanMtmNew"
+				path="/3pl/transport/TransShipPlanMtmNew.jsp" redirect="false" />
+			<forward name="transCarPlanNewPackMtm" path="/3pl/transport/TransCarPlanNewPackMtm.jsp" />
+			<forward name="viewTransShipPlanMtm"
+				path="/3pl/transport/TransShipPlanMtmView.jsp" redirect="false" />
+			<forward name="transPlanAllMtm" path="/3pl/transport/TransPlanAllForMtm.jsp" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+     <!--mahukang  add  by 20161118  end-->
+     
+     <!-- 二程船批信息管理 -->
+		<!--mahukang  add  by 20161013  start-->
+        <action path="/transport/transShipLoadMtm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransShipLoadMtmAction"
+			name="shipManagerMtmForm" scope="request" unknown="false" validate="false"
+			parameter="method">
+			<forward name="shipMtmManager"
+				path="base.tplTransShipMtm.shipManagerMtm" redirect="false" />
+			<forward name="shipMtmManagerAdd"
+				path="base.tplTranShipMtm.shipManagerMtmNew" redirect="false" />
+			<forward name="shipMtmManagerAlt"
+				path="base.tplTranShipMtm.shipManagerMtmAlt" redirect="false" />
+			<forward name="shipMtmManagerDetail"
+				path="base.tplTranShipMtm.shipManagerMtmDetail" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+     <!--mahukang  add  by 20161013  end-->
+     
+     
+     
+     <!-- 仓库规则管理 -->
+		<!--mahukang  add  by 20170110  start-->
+        <action path="/transport/transWarehouseRules"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TplTransWarehouseRulesAction"
+			name="tplTransRulesFrom" scope="request" unknown="false" validate="false"
+			parameter="method">
+			<forward name="transWarehouseRulesInq"
+				path="/3pl/transport/TransWarehouseRulesInq.jsp" redirect="false" />
+			<forward name="transWarehouseRulesAdd"
+				path="/3pl/transport/TransWarehouseRulesNew.jsp" redirect="false" />
+			<forward name="updateWarehouseRulesAlt"
+				path="/3pl/transport/TransWarehouseRulesAlt.jsp" redirect="false" />
+			<forward name="tplUintContranst"
+				path="/3pl/transport/TplUnitContrast.jsp" redirect="false" />
+		
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+     <!--mahukang  add  by 20161010  end-->
+     
+     <!-- 车库联动规则管理 -->
+		<!--mahukang  add  by 20170110  start-->
+        <action path="/transport/transGarageRules"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TplTransGarageRulesAction"
+			name="tplTransRulesFrom" scope="request" unknown="false" validate="false"
+			parameter="method">
+			<forward name="transGarageRulesInq"
+				path="/3pl/transport/TransGarageRulesInq.jsp" redirect="false" />
+			<forward name="transGarageRulesAdd"
+				path="/3pl/transport/TransGarageRulesNew.jsp" redirect="false" />
+			<forward name="updateGarageRulesAlt"
+				path="/3pl/transport/TransGarageRulesAlt.jsp" redirect="false" />
+			<forward name="tplUintContranst"
+				path="/3pl/transport/TplUnitContrast.jsp" redirect="false" />
+		
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+     <!--mahukang  add  by 20161010  end-->
+     
+     
+     	<action path="/transport/transChooPlanMtm"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransChooPlanMtmAction"
+			name="transPlanForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transChooPlanMtmInq"
+				path="/3pl/transport/TransChooPlanInqMtm.jsp" redirect="false" />
+			<forward name="transChooPlanNewPackMtm" path="/3pl/transport/TransChooPlanNewPackMtm.jsp" />
+				
+			<forward name="transChooPlanView"
+				path="/3pl/transport/TransChooPlanView.jsp" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		
+		<action path="/mobile/mobile"
+			type="com.baosight.baosteel.bli.tpl.pad.mobile.struts.action.MobileAction"
+			name="mobileForm" scope="request" unknown="false"
+			validate="false">
+		</action>
+		
+		<action path="/transport/transMaterialManage"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransMaterialManageAction"
+			name="tplCarPlanForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transMaterialManage"
+				path="/3pl/transport/TransMaterialManage.jsp" redirect="false" />
+			<forward name="transMaterialManageQuery" path="/3pl/transport/TransMaterialManageQuery.jsp" />
+			<forward name="transTruckMaterial" path="/3pl/transport/TransTruckMaterial.jsp"></forward>
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		
+		<!--<action path="/transport/transConDistribute"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransConDistributeAction"
+			name="transConDistributeForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="contractList"
+				path="/3pl/transport/TransConDistribute.jsp" redirect="false" />
+				
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		
+		<action path="/transport/transLoading"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransLoadingAction"
+			name="transLoadingForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="transLoadingList"
+				path="/3pl/transport/TransLoadingPlan.jsp" redirect="false" />
+				
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		
+	-->
+	
+		<action path="/base/tplOverhaulManage"
+			type="com.baosight.baosteel.bli.tpl.base.struts.action.TplOverhaulManageAction"
+			name="tplOverhaulForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="queryOverhaul" path="/3pl/base/TplOverhaulManage.jsp" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		
+		<action path="/transport/transTruckSeq"
+			type="com.baosight.baosteel.bli.tpl.transport.struts.action.TransTruckSeqAction"
+			name="tplTransSeqForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="queryTransSeq" path="/3pl/transport/TransTruckSeq.jsp" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		
+		<action path="/supplier/zGWarehouseAction"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.ZGWarehouseAction"
+			name="zGWarehouseForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="zgWarehuoseQuery" path="/3pl/resource/ZGWarehouseMgr.jsp" redirect="false" />
+			<forward name="zgWarehuoseAdd" path="/3pl/resource/ZGWarehouseNew.jsp" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/warehouseLineUpAction"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.WarehouseLineUpAction"
+			name="warehouseLineUpForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="warehuoseLineUpQuery" path="/3pl/entry/infoWarehouseLineUp.jsp" redirect="false" />
+			<forward name="queryDetail" path="/3pl/entry/warehouseLineUpDetail.jsp" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/CarArrivePosition"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.CarArrivePositionAction"
+			name="carArrivePositionForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="carArrivePositionQuery" path="/3pl/entry/carArrivePositionInfo.jsp" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+		<action path="/supplier/selfExtractionTrain"
+			type="com.baosight.baosteel.bli.tpl.supplier.struts.action.SelfExtractionTrainAction"
+			name="selfExtractionTrainForm" scope="request" unknown="false"
+			validate="false">
+			<forward name="selfmentionIronTransQuery" path="/3pl/entry/selfExtractionTrain.jsp" redirect="false" />
+			<forward name="selfmentionIronTransItem" path="/3pl/entry/selfExtractionTrainDetail.jsp" redirect="false" />
+			<forward name="fail" path="3pl.common.error"
+				redirect="false" />
+		</action>
+	</action-mappings>
+
+	<controller
+		processorClass="com.baosight.baosteel.bli.tpl.ControlRequestProcessor" />
+
+	<message-resources parameter="application" />
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config"
+			value="/WEB-INF/tiles/tiles-defs.xml" />
+	</plug-in>
+
+
+	<action input="/login.jsp" 
+	          name="loginActionForm"
+	          path="/loginAction" 
+	          scope="request"   
+	          type="org.springframework.web.struts.DelegatingActionProxy" 
+	          validate="false">
+	           <forward name="success" path="/success.jsp" />
+	           <forward name="failure" path="/failure.jsp" />
+	 </action>
+	<action-mapping>
+		 <action input="/login.jsp" 
+		          name="loginActionForm"
+		          path="/loginAction" 
+		          scope="request"   
+		          type="org.springframework.web.struts.DelegatingActionProxy" 
+		          validate="false">
+		           <forward name="success" path="/success.jsp" />
+		           <forward name="failure" path="/failure.jsp" />
+		 </action>
+	</action-mapping>
+	
+	<controller>
+		<set-property property="processorClass" value="org.springframework.web.struts.DelegationRequestProcessor"/>
+	</controller>
+
+
+
+
+
+
+</struts-config>

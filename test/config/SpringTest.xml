@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<filter>
+<filter-name>hibernateFilter</filter-name>
+<filter-class>
+org.springframework.orm.hibernate3.support.OpenSessionInViewFilter
+</filter-class>
+<init-param>
+<param-name>sessionFactoryBeanName</param-name>
+<param-value>sessionFactory</param-value>
+</init-param>
+<init-param>
+<param-name>singleSession</param-name>
+<param-value>true</param-value>
+</init-param>
+<init-param>
+<param-name>flushMode</param-name>
+<param-value>AUTO</param-value>
+</init-param>
+</filter>
+
+<filter-mapping>
+<filter-name>hibernateFilter</filter-name>
+<url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<listener>
+<listener-class>
+org.springframework.web.context.ContextLoaderListener
+</listener-class>
+</listener>
+
+
+
+
+
+
+
+<bean id="redisClient" class="redis.clients.jedis.JedisPool">
+        <constructor-arg name="host" value="192.168.146.131"></constructor-arg>
+        <constructor-arg name="port" value="6379"></constructor-arg>
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig"></constructor-arg>
+    </bean>
+    <bean id="jedisClient" class="com.taotao.rest.dao.impl.JedisClientSingle"/>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <!-- 最大连接数 -->
+        <property name="maxTotal" value="30" />
+        <!-- 最大空闲连接数 -->
+        <property name="maxIdle" value="10" />
+        <!-- 每次释放连接的最大数目 -->
+        <property name="numTestsPerEvictionRun" value="1024" />
+        <!-- 释放连接的扫描间隔（毫秒） -->
+        <property name="timeBetweenEvictionRunsMillis" value="30000" />
+        <!-- 连接最小空闲时间 -->
+        <property name="minEvictableIdleTimeMillis" value="1800000" />
+        <!-- 连接空闲多久后释放, 当空闲时间>该值 且 空闲连接>最大空闲连接数 时直接释放 -->
+        <property name="softMinEvictableIdleTimeMillis" value="10000" />
+        <!-- 获取连接时的最大等待毫秒数,小于零:阻塞不确定的时间,默认-1 -->
+        <property name="maxWaitMillis" value="1500" />
+        <!-- 在获取连接的时候检查有效性, 默认false -->
+        <property name="testOnBorrow" value="true" />
+        <!-- 在空闲时检查有效性, 默认false -->
+        <property name="testWhileIdle" value="true" />
+        <!-- 连接耗尽时是否阻塞, false报异常,ture阻塞直到超时, 默认true -->
+        <property name="blockWhenExhausted" value="false" />
+    </bean>   
+    <!-- jedis客户端单机版 -->
+    <bean id="redisClient" class="redis.clients.jedis.JedisPool">
+        <constructor-arg name="host" value="192.168.146.131"></constructor-arg>
+        <constructor-arg name="port" value="6379"></constructor-arg>
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig"></constructor-arg>
+    </bean>
+    <bean id="jedisClient" class="com.taotao.rest.dao.impl.JedisClientSingle"/>
+     
+     
+    <!-- jedis集群版配置 -->
+    <!-- <bean id="redisClient" class="redis.clients.jedis.JedisCluster">
+        <constructor-arg name="nodes">
+            <set>
+                <bean class="redis.clients.jedis.HostAndPort">
+                    <constructor-arg name="host" value="192.168.25.153"></constructor-arg>
+                    <constructor-arg name="port" value="7001"></constructor-arg>
+                </bean>
+                <bean class="redis.clients.jedis.HostAndPort">
+                    <constructor-arg name="host" value="192.168.25.153"></constructor-arg>
+                    <constructor-arg name="port" value="7002"></constructor-arg>
+                </bean>
+                <bean class="redis.clients.jedis.HostAndPort">
+                    <constructor-arg name="host" value="192.168.25.153"></constructor-arg>
+                    <constructor-arg name="port" value="7003"></constructor-arg>
+                </bean>
+                <bean class="redis.clients.jedis.HostAndPort">
+                    <constructor-arg name="host" value="192.168.25.153"></constructor-arg>
+                    <constructor-arg name="port" value="7004"></constructor-arg>
+                </bean>
+                <bean class="redis.clients.jedis.HostAndPort">
+                    <constructor-arg name="host" value="192.168.25.153"></constructor-arg>
+                    <constructor-arg name="port" value="7005"></constructor-arg>
+                </bean>
+                <bean class="redis.clients.jedis.HostAndPort">
+                    <constructor-arg name="host" value="192.168.25.153"></constructor-arg>
+                    <constructor-arg name="port" value="7006"></constructor-arg>
+                </bean>
+            </set>
+        </constructor-arg>
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig"></constructor-arg>
+    </bean>
+    <bean id="jedisClientCluster" class="com.taotao.rest.dao.impl.JedisClientCluster"></bean> -->    
+    
+    
+    
+    
+    <!-- 自动扫描配置 -->
+   	<context:annotation-config/>
+    <context:component-scan base-package="url.*">
+    	<!-- 过滤掉不要扫描的文件的路径 -->
+    	<context:excule-filter type ="annotation" expression=""></context:excule-filter>
+    </context:component-scan>
+    
+    <!-- 扩充注释驱动 -->
+    <mvc:annotation-driven></mvc:annotation-driven>    

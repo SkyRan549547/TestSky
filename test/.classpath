@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/Sun JDK 1.6.0_13"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.hibernate.MYECLIPSE_HIBERNATE3_3_EM"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.hibernate.MYECLIPSE_HIBERNATE3_3_CORE"/>
+	<classpathentry kind="lib" path="lib/ojdbc14_10.0.2.jar"/>
+	<classpathentry kind="lib" path="E:/3plTool/ecilpse/jdk1.42/src.zip"/>
+	<classpathentry kind="lib" path="lib/spring.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/javaJar/j2ee.jar"/>
+	<classpathentry kind="lib" path="E:/ToolJar/json-lib-2.4-jdk14.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

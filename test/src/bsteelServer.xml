@@ -1,0 +1,139 @@
+<bsteel-server>
+	
+	
+	
+	<!-- end 调度员 -->
+	
+	<!-- start 司机 -->
+	<http id="receiveFrontInfo">
+		<name>receiveFrontInfo</name>
+		<description>接收车头信息</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsPadReceiveFrontInfo</class>
+	</http>
+	<!-- add ljh-->
+	<http id="receiveQultShotInfo">
+		<name>receiveQultShotInfo</name>
+		<description>接收质量缺陷配置和拍摄类型配置信息</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsPadReceiveQultShotInfo</class>
+	</http>
+	<!-- add ljh -->
+	<http id="receiveQultPicInfo">
+		<name>receiveQultPicInfo</name>
+		<description>接收质量图片业务信息</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsPadReceiveQultPicInfo</class>
+	</http>
+
+	<http id="receiveBillTime">
+		<name>receiveBillTime</name>
+		<description>接收提单计划提货信息</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsPadReceiveBillTime</class>
+	</http>
+	<http id="receiveBillPack">
+		<name>receiveBillPack</name>
+		<description>接收计划捆包信息</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsPadReceiveBillPack</class>
+	</http>
+	<http id="receiveTrailerInfo">
+		<name>receiveTrailerInfo</name>
+		<description>接收挂车信息</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsPadTrailerInfo</class>
+	</http>
+	
+	<http id="receiveDisPatchPlanLsitR">
+		<name>receiveDisPatchPlanLsitR</name>
+		<description>接收调度计划</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsPadReceiveDisPlan</class>
+	</http>
+	
+	<http id="receiveDisPatchPlanDetLsit">
+		<name>receiveDisPatchPlanDetLsit</name>
+		<description>接收调度计划详细</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsPadReceiveDisPlanDet</class>
+	</http>
+	
+	<http id="sendLoadingList">
+		<name>sendLoadingList</name>
+		<description>发送装车清单</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsPadLoadList</class>
+	</http>
+	
+	<http id="sendLoadingAbnormal">
+		<name>sendLoadingAbnormal</name>
+		<description>发送装车异议材料</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsPadLoadAbnormal</class>
+	</http>
+	
+	<http id="sendLeaveRst">
+		<name>sendLeaveRst</name>
+		<description>发送发车反馈</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsSendLeaveRst</class>
+	</http>
+	
+	<http id="receiveTrainList">
+		<name>receiveTrainList</name>
+		<description>接收汽运车次</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsReceiveTrainList</class>
+	</http>
+	
+	<http id="receiveTrainDetList">
+		<name>receiveTrainDetList</name>
+		<description>接收汽运车次详细</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsReceiveTrainListChild</class>
+	</http>
+	
+	<http id="sendGoods">
+		<name>sendGoods</name>
+		<description>发送到货反馈</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsSendGoods</class>
+	</http>
+	
+	<http id="receiveSigns">
+		<name>receiveSigns</name>
+		<description>接收签收单</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsReceiceTplTruckSign</class>
+	</http>
+	<http id="receiveSignsDet">
+		<name>receiveSignsDet</name>
+		<description>接收签收单详细</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsReceiceTplTruckSignDet</class>
+	</http>
+	
+	
+	<http id="sendSignPic">
+		<name>sendSignPic</name>
+		<description>发送签收图片（签收反馈）</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsReceiceTplTruckSignRs</class>
+	</http>
+	
+	<http id="sendGPSInfo">
+		<name>sendGPSInfo</name>
+		<description>发送GPS经纬度</description>
+		<class>com.baosight.baosteel.bli.tpl.pad.run.interfaces.WsPadGPSInfo</class>
+	</http>
+	
+	
+	<filter>
+		<filter-name>SetCharacterEncoding</filter-name>
+		<filter-class>
+			com.baosight.web.filter.ChangeCharsetFilter
+		</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>GBK</param-value>
+		</init-param>
+	</filter>
+	
+	
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			com.baosight.web.struts.BActionServlet
+		</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<!-- end 司机 -->
+</bsteel-server>
