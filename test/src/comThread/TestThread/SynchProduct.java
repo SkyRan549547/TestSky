@@ -7,12 +7,7 @@ import comThread.javaBean.UserInfo;
 public class SynchProduct implements Runnable {
 
 	private UserInfo info ;
-	private volatile Integer  index=50;
-	
-//	private synchronized Integer getIndex(){
-//		return index--;
-//	}
-	
+		
 	
 	public SynchProduct(UserInfo info){
 		this.info = info;
@@ -20,11 +15,11 @@ public class SynchProduct implements Runnable {
 	
 	public void run() {
 		while(true){
-			if(index<0){
+			if(info.getIndex()<0){
 				break;
 			}
-			if(index%2==0){
-				System.out.println("...."+Thread.currentThread().getName()+":"+index--+".....");
+			if(info.getIndex()%2==0){
+				System.out.println("...."+Thread.currentThread().getName()+":"+info.getNextIndex()+".....");
 				this.info.set("张三", "好学生");
 				try {
 					Thread.sleep(100);
@@ -33,7 +28,7 @@ public class SynchProduct implements Runnable {
 				}
 				this.info.get();
 			}else{
-				System.out.println("...."+Thread.currentThread().getName()+":"+index--+".....");
+				System.out.println("...."+Thread.currentThread().getName()+":"+info.getNextIndex()+".....");
 				this.info.set("王五", "草泥马");
 				try {
 					Thread.sleep(100);
@@ -42,7 +37,6 @@ public class SynchProduct implements Runnable {
 				}
 				this.info.get();
 			}
-			
 		}
 	}
 

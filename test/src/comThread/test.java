@@ -11,11 +11,43 @@ public class test {
 	private Lock lock = new ReentrantLock();
 	public Condition condition = lock.newCondition();
 
+	
+	public static volatile int t = 0;
+	
+//	public synchronized static int getInt(){
+//		return t ++;
+//	}
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
+		Thread[] threads = new Thread[100];
+        for(int i = 0; i < 100; i++){
+            //每个线程对t进行1000次加1的操作
+            threads[i]= new Thread(new Runnable(){
+                
+                public void run(){
+                    for(int j = 0; j < 1000; j++){
+                    	t=t+1;
+                    }
+                }
+            });
+            threads[i].start();
+        }
 
+        //等待所有累加线程都结束
+        while(Thread.activeCount() > 1){
+            Thread.yield();
+        }
+
+        //打印t的值
+        System.out.println(t);
+		
+		
+
+        
+        
 		// CollegeStudent stu =new CollegeStudent();
 		// MyRunnable tread =new MyRunnable(stu);
 		// new Thread(tread).start();
@@ -23,13 +55,13 @@ public class test {
 		// MyThread mthread =new MyThread();
 		// mthread.run();
 
-		String str = "";
-		System.out.println("---------------------------" + str.length());
-
-		Singleton demo = Singleton.getInstance();
-		Singleton demo1 = Singleton.getInstance();
-		System.out.println("------------demo---------------" + demo);
-		System.out.println("------------demo1---------------" + demo1);
+//		String str = "";
+//		System.out.println("---------------------------" + str.length());
+//
+//		Singleton demo = Singleton.getInstance();
+//		Singleton demo1 = Singleton.getInstance();
+//		System.out.println("------------demo---------------" + demo);
+//		System.out.println("------------demo1---------------" + demo1);
 
 	}
 

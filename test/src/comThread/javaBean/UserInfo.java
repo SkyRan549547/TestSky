@@ -5,6 +5,7 @@ public class UserInfo {
 	private String name;
 	private String project;
 	private boolean flag = true;
+	private int index=50;
 	//flag为true表示可以生产，但不可以取走
 	//flag为false表示可以取走，但不可以生产
 	public synchronized void set(String name, String project){
@@ -40,6 +41,8 @@ public class UserInfo {
 	}
 	
 	
+	
+	
 //	public synchronized void set(String name, String project){
 //		this.name = name;
 //		this.project = project;
@@ -53,6 +56,21 @@ public class UserInfo {
 //		}
 //		System.out.println(this.name+"--"+this.project+"数据");
 //	}
+	
+	/**
+	 * @return the index
+	 */
+	public synchronized int getIndex() {
+		return index;
+	}
+
+	/**
+	 * @param index the index to set
+	 */
+	public  synchronized int getNextIndex() {
+		return index--;
+	}
+
 	
 	public String getName() {
 		return name;

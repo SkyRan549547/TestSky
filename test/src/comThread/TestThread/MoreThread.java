@@ -14,7 +14,13 @@ public class MoreThread {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		// Synchron thread = new Synchron();
 		// new Thread(thread,"Æ±··×ÓA").start();
 		// new Thread(thread,"Æ±··×ÓB").start();
@@ -27,15 +33,18 @@ public class MoreThread {
 		// Thread t2 = new Thread(syncp);
 		// t1.start();
 		// t2.start();
-
 		UserInfo info = new UserInfo();
-		Thread t1 = new Thread(new SynchProduct(info));
-		Thread t2 = new Thread(new SynchCustomer(info));
+
+		for(int i =0 ;i<6; i++){
+			Thread t1 = new Thread(new SynchProduct(info));
+			t1.start();
+		}
+		
+//		Thread t2 = new Thread(new SynchCustomer(info));
 		// t1.setPriority(Thread.MIN_PRIORITY);
 		// t2.setPriority(Thread.MAX_PRIORITY);
 		// t1.setDaemon(false);
-		t1.start();
-		t2.start();
+//		t2.start();
 
 		// final MoreThread s = new MoreThread();
 		// new Thread(new Runnable(){
