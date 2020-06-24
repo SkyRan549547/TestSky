@@ -1,0 +1,63 @@
+一、git安装及github账号的注册
+二、获取公钥
+	将公钥setting ssh-keygen到GitHub
+
+三、常用的命令：
+	添加要提交的文件: git add
+	提交到缓存区:  git commit -m""
+	相当于update: git pull origin master(或分支名称)
+	将缓存区文件提交到GitHub的分支上:  git push origin master(或分支名称)
+	进入到一个分支:  git checkout branchName
+	远程连接url上的GitHub:  git remote add origin https://github.com/SkyRan549547/TestSky.git
+	git clone -b +分支名称 +github连接url
+	git clone +github连接url
+	查看一个文件在不同版本间的不同之处:  git diff --stat mybest origin/mybest
+	git push -u origin mybest -f
+
+	创建分支:   git branch -a
+
+	ssh-keygen -t rsa -C "githu项目url.git"(创建公钥)
+	git remote add origin +githu项目url.git (连接本地与远程)
+	
+	查看merge工具: git mergetool --tool-help;
+
+	注意：git pull与git fetch的区别
+			git pull 是 git fetch与merge操作的结合
+	
+
+
+
+	git 对比两个分支差异
+
+	1. 显示出branch1和branch2中差异的部分
+	
+	git diff branch1 branch2 --stat
+	
+	2. 显示指定文件的详细差异
+	
+	git diff branch1 branch2 具体文件路径
+	
+	
+	3. 显示出所有有差异的文件的详细差异
+	
+	git diff branch1 branch2
+	
+	
+	
+	4. 查看branch1分支有，而branch2中没有的log
+	
+	git log branch1 ^branch2
+	
+	5. 查看branch2中比branch1中多提交了哪些内容
+	
+	git log branch1..branch2
+	注意，列出来的是两个点后边（此处即dev）多提交的内容。
+	
+	
+	6. 不知道谁提交的多谁提交的少，单纯想知道有是吗不一样
+	git log branch1...branch2
+	
+	7. 在上述情况下，在显示出没个提交是在哪个分支上
+	
+	git log --lefg-right branch1...branch2
+	注意 commit 后面的箭头，根据我们在 –left-right branch1…branch2 的顺序，左箭头 < 表示是 branch1 的，右箭头 > 表示是branch2的
